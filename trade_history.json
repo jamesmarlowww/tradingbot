@@ -1,0 +1,3102 @@
+{
+  "trade_history": {
+    "BTCUSDT": {
+      "MovingAverageCrossover": {
+        "trades": [
+          {
+            "timestamp": "2025-04-29 17:10:40",
+            "type": "SELL",
+            "price": 94715.02,
+            "quantity": 0.001,
+            "value_usd": 94.71502000000001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 14:42:45",
+            "type": "SELL",
+            "price": 94942.42,
+            "quantity": 0.001,
+            "value_usd": 94.94242,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:09:26",
+            "type": "SELL",
+            "price": 95020.16,
+            "quantity": 0.001,
+            "value_usd": 95.02016,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:10:32",
+            "type": "SELL",
+            "price": 95026.39,
+            "quantity": 0.001,
+            "value_usd": 95.02639,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:11:36",
+            "type": "BUY",
+            "price": 94993.7,
+            "quantity": 0.001,
+            "value_usd": 94.9937,
+            "status": "FILLED",
+            "pnl": -0.15307000000000698
+          },
+          {
+            "timestamp": "2025-04-30 15:31:17",
+            "type": "SELL",
+            "price": 94973.51,
+            "quantity": 0.001,
+            "value_usd": 94.97350999999999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:17:17",
+            "type": "BUY",
+            "price": 94954.14,
+            "quantity": 0.0016040750405932798,
+            "value_usd": 152.31356597499996,
+            "status": "FILLED",
+            "pnl": -0.07263999999999941
+          },
+          {
+            "timestamp": "2025-04-30 16:22:45",
+            "type": "SELL",
+            "price": 94881.5,
+            "quantity": 0.001,
+            "value_usd": 94.8815,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:27:05",
+            "type": "BUY",
+            "price": 94896.88,
+            "quantity": 0.001,
+            "value_usd": 94.89688000000001,
+            "status": "FILLED",
+            "pnl": -0.049630000000004657
+          },
+          {
+            "timestamp": "2025-04-30 16:36:47",
+            "type": "SELL",
+            "price": 94847.25,
+            "quantity": 0.001,
+            "value_usd": 94.84725,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 17:09:46",
+            "type": "SELL",
+            "price": 94743.81,
+            "quantity": 0.001,
+            "value_usd": 94.74381,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:15:57",
+            "type": "SELL",
+            "price": 94719.04,
+            "quantity": 0.0033682792496102162,
+            "value_usd": 319.040176975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 09:11:17",
+            "type": "BUY",
+            "price": 94212.61,
+            "quantity": 0.0026016097826501144,
+            "value_usd": 245.104447825,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 09:43:56",
+            "type": "SELL",
+            "price": 94205.34,
+            "quantity": 0.00267869439407575,
+            "value_usd": 252.34731615,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:08:10",
+            "type": "BUY",
+            "price": 94232.0,
+            "quantity": 0.004305278910826471,
+            "value_usd": 405.695042325,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:24:05",
+            "type": "SELL",
+            "price": 94250.0,
+            "quantity": 0.004432709024137932,
+            "value_usd": 417.7828255250001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:25:21",
+            "type": "BUY",
+            "price": 94266.49,
+            "quantity": 0.005539255503201615,
+            "value_usd": 522.1661735,
+            "status": "FILLED",
+            "pnl": 0.01327705524704189
+          },
+          {
+            "timestamp": "2025-05-01 10:35:18",
+            "type": "SELL",
+            "price": 94272.55,
+            "quantity": 0.002190933209083662,
+            "value_usd": 206.54486049999997,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:40:19",
+            "type": "BUY",
+            "price": 94260.0,
+            "quantity": 0.002406804595268407,
+            "value_usd": 226.86540115000003,
+            "status": "FILLED",
+            "pnl": 0.6902000651987843
+          },
+          {
+            "timestamp": "2025-05-01 13:18:10",
+            "type": "SELL",
+            "price": 94751.0,
+            "quantity": 0.0014057027804455892,
+            "value_usd": 133.19174415000003,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:36:23",
+            "type": "BUY",
+            "price": 94780.0,
+            "quantity": 0.001,
+            "value_usd": 94.78,
+            "status": "FILLED"
+          }
+        ],
+        "profit_usd": 0.40794712044581277
+      },
+      "RSIStrategy": {
+        "trades": [
+          {
+            "timestamp": "2025-04-29 16:55:32",
+            "type": "SELL",
+            "price": 94779.99,
+            "quantity": 0.001,
+            "value_usd": 94.77999000000001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-29 17:09:34",
+            "type": "BUY",
+            "price": 94729.2,
+            "quantity": 0.001,
+            "value_usd": 94.7292,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-29 17:11:45",
+            "type": "SELL",
+            "price": 94725.53,
+            "quantity": 0.001,
+            "value_usd": 94.72553,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-29 17:12:52",
+            "type": "BUY",
+            "price": 94723.13,
+            "quantity": 0.001,
+            "value_usd": 94.72313000000001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 14:28:53",
+            "type": "BUY",
+            "price": 94886.49,
+            "quantity": 0.001,
+            "value_usd": 94.88649000000001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 14:31:01",
+            "type": "SELL",
+            "price": 94926.0,
+            "quantity": 0.001,
+            "value_usd": 94.926,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 14:32:05",
+            "type": "BUY",
+            "price": 94892.29,
+            "quantity": 0.001,
+            "value_usd": 94.89228999999999,
+            "status": "FILLED",
+            "pnl": -0.13480000000000292
+          },
+          {
+            "timestamp": "2025-04-30 14:33:09",
+            "type": "SELL",
+            "price": 94884.21,
+            "quantity": 0.001,
+            "value_usd": 94.88421000000001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 14:57:43",
+            "type": "SELL",
+            "price": 95012.69,
+            "quantity": 0.001,
+            "value_usd": 95.01269,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 14:59:50",
+            "type": "BUY",
+            "price": 95028.3,
+            "quantity": 0.0013692949350351423,
+            "value_usd": 130.121769875,
+            "status": "FILLED",
+            "pnl": 0.012139999999999419
+          },
+          {
+            "timestamp": "2025-04-30 15:03:03",
+            "type": "BUY",
+            "price": 95039.33,
+            "quantity": 0.001,
+            "value_usd": 95.03933,
+            "status": "FILLED",
+            "pnl": -0.05432000000000699
+          },
+          {
+            "timestamp": "2025-04-30 15:25:34",
+            "type": "SELL",
+            "price": 95069.95,
+            "quantity": 0.001,
+            "value_usd": 95.06995,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:39:21",
+            "type": "BUY",
+            "price": 94934.86,
+            "quantity": 0.001,
+            "value_usd": 94.93486,
+            "status": "FILLED",
+            "pnl": -0.024860000000000583
+          },
+          {
+            "timestamp": "2025-04-30 15:40:26",
+            "type": "SELL",
+            "price": 94969.99,
+            "quantity": 0.001,
+            "value_usd": 94.96999000000001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:52:00",
+            "type": "SELL",
+            "price": 94910.0,
+            "quantity": 0.001,
+            "value_usd": 94.91,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:00:35",
+            "type": "SELL",
+            "price": 94880.54,
+            "quantity": 0.001,
+            "value_usd": 94.88054,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:31:23",
+            "type": "SELL",
+            "price": 94947.0,
+            "quantity": 0.001,
+            "value_usd": 94.947,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:49:40",
+            "type": "SELL",
+            "price": 94800.06,
+            "quantity": 0.001,
+            "value_usd": 94.80006,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:59:12",
+            "type": "BUY",
+            "price": 94721.63,
+            "quantity": 0.0011110577750298428,
+            "value_usd": 105.241203475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:00:27",
+            "type": "SELL",
+            "price": 94714.29,
+            "quantity": 0.0013015987964962838,
+            "value_usd": 123.280005875,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:15:55",
+            "type": "BUY",
+            "price": 94719.04,
+            "quantity": 0.0044907792496102165,
+            "value_usd": 425.3622993750001,
+            "status": "FILLED",
+            "pnl": 0.0699828636474711
+          },
+          {
+            "timestamp": "2025-04-30 19:30:02",
+            "type": "SELL",
+            "price": 94763.9,
+            "quantity": 0.0015600281686908202,
+            "value_usd": 147.834353375,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 21:37:47",
+            "type": "BUY",
+            "price": 95090.39,
+            "quantity": 0.0034351308278891277,
+            "value_usd": 326.647930125,
+            "status": "FILLED",
+            "pnl": -1.8547176800879988
+          },
+          {
+            "timestamp": "2025-05-01 09:16:59",
+            "type": "SELL",
+            "price": 94329.08,
+            "quantity": 0.002436218728360332,
+            "value_usd": 229.80627132500004,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 09:37:39",
+            "type": "BUY",
+            "price": 94240.02,
+            "quantity": 0.0030465950808372068,
+            "value_usd": 287.11118135,
+            "status": "FILLED",
+            "pnl": 0.12106714870967905
+          },
+          {
+            "timestamp": "2025-05-01 10:10:37",
+            "type": "SELL",
+            "price": 94290.01,
+            "quantity": 0.0024218273396619644,
+            "value_usd": 228.35412407500002,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:15:39",
+            "type": "SELL",
+            "price": 94282.77,
+            "quantity": 0.0035461683409916786,
+            "value_usd": 334.342574075,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:52:23",
+            "type": "SELL",
+            "price": 94384.5,
+            "quantity": 0.003096126301458396,
+            "value_usd": 292.2263329,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:05:48",
+            "type": "SELL",
+            "price": 94472.74,
+            "quantity": 0.004528766395999523,
+            "value_usd": 427.84497025,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:17:02",
+            "type": "SELL",
+            "price": 94609.12,
+            "quantity": 0.0031783384196999195,
+            "value_usd": 300.69980095000005,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:18:18",
+            "type": "BUY",
+            "price": 94659.5,
+            "quantity": 0.003968725046614444,
+            "value_usd": 375.67752855,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:20:49",
+            "type": "BUY",
+            "price": 94645.07,
+            "quantity": 0.0029791657024502175,
+            "value_usd": 281.96334645,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:10:27",
+            "type": "BUY",
+            "price": 94770.55,
+            "quantity": 0.0030493243898025283,
+            "value_usd": 288.98614955,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:40:57",
+            "type": "BUY",
+            "price": 94922.77,
+            "quantity": 0.0023543620334720533,
+            "value_usd": 223.48256580000003,
+            "status": "FILLED",
+            "pnl": -0.2265477520999956
+          },
+          {
+            "timestamp": "2025-05-01 12:54:31",
+            "type": "SELL",
+            "price": 94790.05,
+            "quantity": 0.001706960157474334,
+            "value_usd": 161.802838675,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:58:09",
+            "type": "BUY",
+            "price": 94815.46,
+            "quantity": 0.0015987061023592564,
+            "value_usd": 151.5820545,
+            "status": "FILLED",
+            "pnl": 0.02548552907782897
+          },
+          {
+            "timestamp": "2025-05-01 12:59:30",
+            "type": "BUY",
+            "price": 94826.18,
+            "quantity": 0.001,
+            "value_usd": 94.82618,
+            "status": "FILLED",
+            "pnl": 0.13033000000000175
+          },
+          {
+            "timestamp": "2025-05-01 13:07:14",
+            "type": "SELL",
+            "price": 94956.51,
+            "quantity": 0.001,
+            "value_usd": 94.95651,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:18:07",
+            "type": "SELL",
+            "price": 94751.0,
+            "quantity": 0.0011257116457873795,
+            "value_usd": 106.66230415,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:26:35",
+            "type": "BUY",
+            "price": 94792.47,
+            "quantity": 0.0016454503786007474,
+            "value_usd": 155.97630565,
+            "status": "FILLED",
+            "pnl": 0.009969235840909913
+          },
+          {
+            "timestamp": "2025-05-01 13:27:51",
+            "type": "SELL",
+            "price": 94800.54,
+            "quantity": 0.0012353452095315068,
+            "value_usd": 117.11139294999998,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:29:05",
+            "type": "SELL",
+            "price": 94808.99,
+            "quantity": 0.0015427075712967726,
+            "value_usd": 146.2625467,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:33:55",
+            "type": "BUY",
+            "price": 94791.84,
+            "quantity": 0.0014464527178710742,
+            "value_usd": 137.1119146,
+            "status": "FILLED"
+          }
+        ],
+        "profit_usd": -1.7123606549120967
+      },
+      "BollingerBandStrategy": {
+        "trades": [],
+        "profit_usd": 0.0
+      },
+      "RelativeStrengthStrategy": {
+        "trades": [],
+        "profit_usd": 0.0
+      },
+      "EnhancedRSIStrategy": {
+        "trades": [],
+        "profit_usd": 0.0
+      },
+      "RSIDivergenceStrategy": {
+        "trades": [],
+        "profit_usd": 0.0
+      }
+    },
+    "ETHUSDT": {
+      "MovingAverageCrossover": {
+        "trades": [],
+        "profit_usd": 0.0
+      },
+      "RSIStrategy": {
+        "trades": [],
+        "profit_usd": 0.0
+      },
+      "BollingerBandStrategy": {
+        "trades": [
+          {
+            "timestamp": "2025-04-29 16:52:56",
+            "type": "SELL",
+            "price": 1819.28,
+            "quantity": 0.01011241569467042,
+            "value_usd": 18.397315625,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-29 16:55:33",
+            "type": "BUY",
+            "price": 1819.4,
+            "quantity": 0.025660091170165985,
+            "value_usd": 46.685969875,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-29 16:56:37",
+            "type": "BUY",
+            "price": 1820.51,
+            "quantity": 0.019248101836847914,
+            "value_usd": 35.04136187499999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 14:35:18",
+            "type": "BUY",
+            "price": 1811.01,
+            "quantity": 0.0137013138386867,
+            "value_usd": 24.813216375,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 14:58:46",
+            "type": "SELL",
+            "price": 1812.72,
+            "quantity": 0.05743276671245421,
+            "value_usd": 104.10952487499999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 14:59:51",
+            "type": "BUY",
+            "price": 1811.96,
+            "quantity": 0.05398042808616084,
+            "value_usd": 97.810376475,
+            "status": "FILLED",
+            "pnl": -0.0355127330335551
+          },
+          {
+            "timestamp": "2025-04-30 15:14:49",
+            "type": "SELL",
+            "price": 1806.78,
+            "quantity": 0.014695586333145152,
+            "value_usd": 26.551691475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:31:18",
+            "type": "SELL",
+            "price": 1804.53,
+            "quantity": 0.058310356976608864,
+            "value_usd": 105.22278847499999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:46:54",
+            "type": "BUY",
+            "price": 1801.65,
+            "quantity": 0.01,
+            "value_usd": 18.0165,
+            "status": "FILLED",
+            "pnl": 0.0015999999999985449
+          },
+          {
+            "timestamp": "2025-04-30 15:48:23",
+            "type": "SELL",
+            "price": 1801.81,
+            "quantity": 0.01,
+            "value_usd": 18.0181,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:17:18",
+            "type": "BUY",
+            "price": 1807.83,
+            "quantity": 0.06324262235663752,
+            "value_usd": 114.33190997500002,
+            "status": "FILLED",
+            "pnl": 0.0006999999999993633
+          },
+          {
+            "timestamp": "2025-04-30 16:33:32",
+            "type": "BUY",
+            "price": 1805.9,
+            "quantity": 0.01,
+            "value_usd": 18.059,
+            "status": "FILLED",
+            "pnl": 0.0005999999999994543
+          },
+          {
+            "timestamp": "2025-04-30 16:34:38",
+            "type": "SELL",
+            "price": 1805.96,
+            "quantity": 0.01,
+            "value_usd": 18.0596,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:35:43",
+            "type": "SELL",
+            "price": 1805.97,
+            "quantity": 0.01,
+            "value_usd": 18.0597,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:37:52",
+            "type": "SELL",
+            "price": 1804.45,
+            "quantity": 0.019837471514866027,
+            "value_usd": 35.795725475000005,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:38:56",
+            "type": "SELL",
+            "price": 1804.69,
+            "quantity": 0.024783791108168165,
+            "value_usd": 44.72705997500001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:53:01",
+            "type": "SELL",
+            "price": 1800.19,
+            "quantity": 0.11489213470522555,
+            "value_usd": 206.827671975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:54:19",
+            "type": "BUY",
+            "price": 1800.11,
+            "quantity": 0.13458539254545557,
+            "value_usd": 242.268510975,
+            "status": "FILLED",
+            "pnl": -0.4376927808289113
+          },
+          {
+            "timestamp": "2025-04-30 18:56:47",
+            "type": "SELL",
+            "price": 1796.17,
+            "quantity": 0.11108953828145443,
+            "value_usd": 199.535695975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:21:50",
+            "type": "SELL",
+            "price": 1799.73,
+            "quantity": 0.09345456061464777,
+            "value_usd": 168.19297637500003,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:23:03",
+            "type": "BUY",
+            "price": 1798.95,
+            "quantity": 0.08765192660996694,
+            "value_usd": 157.68143337500004,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:30:05",
+            "type": "BUY",
+            "price": 1801.21,
+            "quantity": 0.10259340908333843,
+            "value_usd": 184.792274375,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:32:26",
+            "type": "BUY",
+            "price": 1803.34,
+            "quantity": 0.07687778268379784,
+            "value_usd": 138.636780625,
+            "status": "FILLED",
+            "pnl": 0.12731164414513793
+          },
+          {
+            "timestamp": "2025-04-30 19:33:38",
+            "type": "SELL",
+            "price": 1805.55,
+            "quantity": 0.057607078798704,
+            "value_usd": 104.012461125,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:34:51",
+            "type": "BUY",
+            "price": 1804.81,
+            "quantity": 0.07203349112926012,
+            "value_usd": 130.00676512499996,
+            "status": "FILLED",
+            "pnl": -0.13342740952977952
+          },
+          {
+            "timestamp": "2025-05-01 09:44:00",
+            "type": "BUY",
+            "price": 1794.79,
+            "quantity": 0.17563545586113138,
+            "value_usd": 315.228759825,
+            "status": "FILLED",
+            "pnl": -0.06720405416699057
+          },
+          {
+            "timestamp": "2025-05-01 09:45:16",
+            "type": "SELL",
+            "price": 1794.28,
+            "quantity": 0.13177265522939563,
+            "value_usd": 236.437039825,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 09:46:32",
+            "type": "SELL",
+            "price": 1793.98,
+            "quantity": 0.16472519695035617,
+            "value_usd": 295.513708825,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:05:43",
+            "type": "SELL",
+            "price": 1796.04,
+            "quantity": 0.18070807739526962,
+            "value_usd": 324.55893532500005,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:08:13",
+            "type": "BUY",
+            "price": 1797.05,
+            "quantity": 0.16938629549817755,
+            "value_usd": 304.3956423249999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:48:40",
+            "type": "SELL",
+            "price": 1798.2,
+            "quantity": 0.18495283013569125,
+            "value_usd": 332.58217915,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:49:55",
+            "type": "BUY",
+            "price": 1797.55,
+            "quantity": 0.23126116764484997,
+            "value_usd": 415.7035119,
+            "status": "FILLED",
+            "pnl": 0.5285304242777661
+          },
+          {
+            "timestamp": "2025-05-01 11:04:29",
+            "type": "SELL",
+            "price": 1800.33,
+            "quantity": 0.19011885765387457,
+            "value_usd": 342.276683,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:09:34",
+            "type": "BUY",
+            "price": 1803.19,
+            "quantity": 0.2964741188948474,
+            "value_usd": 534.59916645,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:10:50",
+            "type": "BUY",
+            "price": 1804.69,
+            "quantity": 0.2221687638597211,
+            "value_usd": 400.94574645000006,
+            "status": "FILLED",
+            "pnl": 1.2338598495243418
+          },
+          {
+            "timestamp": "2025-05-01 11:56:20",
+            "type": "BUY",
+            "price": 1806.0,
+            "quantity": 0.17067443911960134,
+            "value_usd": 308.23803705,
+            "status": "FILLED",
+            "pnl": 0.3732265381697458
+          },
+          {
+            "timestamp": "2025-05-01 11:57:35",
+            "type": "SELL",
+            "price": 1808.92,
+            "quantity": 0.12781730759237553,
+            "value_usd": 231.21128404999996,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:38:32",
+            "type": "SELL",
+            "price": 1818.55,
+            "quantity": 0.09831552585851365,
+            "value_usd": 178.79169955,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:41:00",
+            "type": "BUY",
+            "price": 1816.42,
+            "quantity": 0.09232750213331718,
+            "value_usd": 167.705521425,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:54:34",
+            "type": "BUY",
+            "price": 1808.65,
+            "quantity": 0.11173450128548916,
+            "value_usd": 202.08860574999997,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:32:40",
+            "type": "BUY",
+            "price": 1813.31,
+            "quantity": 0.10079027185092457,
+            "value_usd": 182.76400785,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 14:13:11",
+            "type": "BUY",
+            "price": 1809.41,
+            "quantity": 0.010928033778966624,
+            "value_usd": 19.7732936,
+            "status": "FILLED"
+          }
+        ],
+        "profit_usd": 1.5158683413520597
+      },
+      "RelativeStrengthStrategy": {
+        "trades": [],
+        "profit_usd": 0.0
+      },
+      "EnhancedRSIStrategy": {
+        "trades": [],
+        "profit_usd": 0.0
+      },
+      "RSIDivergenceStrategy": {
+        "trades": [],
+        "profit_usd": 0.0
+      }
+    },
+    "SOLUSDT": {
+      "MovingAverageCrossover": {
+        "trades": [],
+        "profit_usd": 0.0
+      },
+      "RSIStrategy": {
+        "trades": [],
+        "profit_usd": 0.0
+      },
+      "BollingerBandStrategy": {
+        "trades": [],
+        "profit_usd": 0.0
+      },
+      "RelativeStrengthStrategy": {
+        "trades": [],
+        "profit_usd": 0.0
+      },
+      "EnhancedRSIStrategy": {
+        "trades": [],
+        "profit_usd": 0.0
+      },
+      "RSIDivergenceStrategy": {
+        "trades": [
+          {
+            "timestamp": "2025-04-30 15:39:22",
+            "type": "BUY",
+            "price": 147.27,
+            "quantity": 0.34146170961499284,
+            "value_usd": 50.287065975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:40:27",
+            "type": "BUY",
+            "price": 147.33,
+            "quantity": 0.4172517034887667,
+            "value_usd": 61.473693475000005,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:41:31",
+            "type": "BUY",
+            "price": 147.33,
+            "quantity": 0.31300170348876666,
+            "value_usd": 46.114540975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:42:35",
+            "type": "BUY",
+            "price": 147.24,
+            "quantity": 0.2349005092026623,
+            "value_usd": 34.586750975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:43:40",
+            "type": "BUY",
+            "price": 147.22,
+            "quantity": 0.17643639434180142,
+            "value_usd": 25.974965975000003,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:44:44",
+            "type": "SELL",
+            "price": 147.2,
+            "quantity": 0.13245438841711957,
+            "value_usd": 19.497285975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:45:48",
+            "type": "BUY",
+            "price": 147.09,
+            "quantity": 0.12426334880005438,
+            "value_usd": 18.277895975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:46:55",
+            "type": "BUY",
+            "price": 146.92,
+            "quantity": 0.1,
+            "value_usd": 14.692,
+            "status": "FILLED",
+            "pnl": 0.001999999999998181
+          },
+          {
+            "timestamp": "2025-04-30 15:48:24",
+            "type": "BUY",
+            "price": 146.91,
+            "quantity": 0.1,
+            "value_usd": 14.691,
+            "status": "FILLED",
+            "pnl": 0.0030000000000001137
+          },
+          {
+            "timestamp": "2025-04-30 15:52:01",
+            "type": "BUY",
+            "price": 147.01,
+            "quantity": 0.18152105962179446,
+            "value_usd": 26.685410975000003,
+            "status": "FILLED",
+            "pnl": 0.012720169572457134
+          },
+          {
+            "timestamp": "2025-04-30 15:53:06",
+            "type": "BUY",
+            "price": 147.02,
+            "quantity": 0.13626179074275607,
+            "value_usd": 20.033208475,
+            "status": "FILLED",
+            "pnl": 0.009999999999999433
+          },
+          {
+            "timestamp": "2025-04-30 15:54:10",
+            "type": "SELL",
+            "price": 147.12,
+            "quantity": 0.1,
+            "value_usd": 14.712000000000002,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:55:14",
+            "type": "SELL",
+            "price": 147.12,
+            "quantity": 0.12720169572457857,
+            "value_usd": 18.713913475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:58:27",
+            "type": "SELL",
+            "price": 147.05,
+            "quantity": 0.1,
+            "value_usd": 14.705000000000002,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:59:31",
+            "type": "SELL",
+            "price": 147.04,
+            "quantity": 0.1,
+            "value_usd": 14.704,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:00:36",
+            "type": "SELL",
+            "price": 147.1,
+            "quantity": 0.23224392233174712,
+            "value_usd": 34.163080975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:01:40",
+            "type": "SELL",
+            "price": 147.19,
+            "quantity": 0.21766261957334054,
+            "value_usd": 32.03776097499999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:02:44",
+            "type": "SELL",
+            "price": 147.16,
+            "quantity": 0.33960406003669474,
+            "value_usd": 49.976133475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:03:48",
+            "type": "SELL",
+            "price": 147.17,
+            "quantity": 0.5301399468301964,
+            "value_usd": 78.020695975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:04:51",
+            "type": "SELL",
+            "price": 147.14,
+            "quantity": 0.6627480357142859,
+            "value_usd": 97.516745975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:05:55",
+            "type": "SELL",
+            "price": 147.12,
+            "quantity": 0.8283156333265362,
+            "value_usd": 121.86179597500002,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:17:19",
+            "type": "SELL",
+            "price": 147.47,
+            "quantity": 0.5815966635586899,
+            "value_usd": 85.768059975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:18:25",
+            "type": "SELL",
+            "price": 147.45,
+            "quantity": 0.5451822650050866,
+            "value_usd": 80.387124975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:19:30",
+            "type": "SELL",
+            "price": 147.45,
+            "quantity": 0.38328789403187524,
+            "value_usd": 56.515799975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:20:36",
+            "type": "SELL",
+            "price": 147.44,
+            "quantity": 0.3595915625,
+            "value_usd": 53.018179975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:21:40",
+            "type": "SELL",
+            "price": 147.35,
+            "quantity": 0.33742125873769935,
+            "value_usd": 49.719022474999996,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:22:45",
+            "type": "SELL",
+            "price": 147.37,
+            "quantity": 0.47733629622718327,
+            "value_usd": 70.345049975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:23:50",
+            "type": "SELL",
+            "price": 147.41,
+            "quantity": 0.44735965996201077,
+            "value_usd": 65.945287475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 17:01:42",
+            "type": "BUY",
+            "price": 147.04,
+            "quantity": 0.5578323209670838,
+            "value_usd": 82.02366447499999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 17:02:54",
+            "type": "BUY",
+            "price": 147.12,
+            "quantity": 0.3139684915375204,
+            "value_usd": 46.191044475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 17:04:09",
+            "type": "BUY",
+            "price": 147.1,
+            "quantity": 0.17690621668932702,
+            "value_usd": 26.022904475000004,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 17:05:00",
+            "type": "BUY",
+            "price": 147.07,
+            "quantity": 0.1,
+            "value_usd": 14.707,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 17:06:14",
+            "type": "BUY",
+            "price": 147.1,
+            "quantity": 0.1,
+            "value_usd": 14.71,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 17:07:26",
+            "type": "BUY",
+            "price": 146.84,
+            "quantity": 0.1,
+            "value_usd": 14.684000000000001,
+            "status": "FILLED",
+            "pnl": 0.12427304134130913
+          },
+          {
+            "timestamp": "2025-04-30 17:09:50",
+            "type": "SELL",
+            "price": 146.73,
+            "quantity": 0.1678798948749404,
+            "value_usd": 24.633016975000004,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 17:11:00",
+            "type": "SELL",
+            "price": 146.76,
+            "quantity": 0.20958419852139548,
+            "value_usd": 30.758576975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 17:12:11",
+            "type": "SELL",
+            "price": 146.88,
+            "quantity": 0.26162028169253815,
+            "value_usd": 38.426786975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 17:13:25",
+            "type": "SELL",
+            "price": 146.9,
+            "quantity": 0.408343427331518,
+            "value_usd": 59.985649475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:37:21",
+            "type": "BUY",
+            "price": 146.64,
+            "quantity": 0.7983068874454448,
+            "value_usd": 117.063721975,
+            "status": "FILLED",
+            "pnl": 0.28674557773764664
+          },
+          {
+            "timestamp": "2025-04-30 18:38:33",
+            "type": "BUY",
+            "price": 146.64,
+            "quantity": 0.5987796779528096,
+            "value_usd": 87.805051975,
+            "status": "FILLED",
+            "pnl": -0.07163710328044508
+          },
+          {
+            "timestamp": "2025-04-30 18:39:45",
+            "type": "BUY",
+            "price": 146.72,
+            "quantity": 0.44903470539122137,
+            "value_usd": 65.882371975,
+            "status": "FILLED",
+            "pnl": -0.06069433127815161
+          },
+          {
+            "timestamp": "2025-04-30 18:43:18",
+            "type": "SELL",
+            "price": 146.54,
+            "quantity": 0.3371907293230517,
+            "value_usd": 49.411929474999994,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:44:30",
+            "type": "SELL",
+            "price": 146.55,
+            "quantity": 0.4213947251791197,
+            "value_usd": 61.755396975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:45:43",
+            "type": "SELL",
+            "price": 146.6,
+            "quantity": 0.5264579261596181,
+            "value_usd": 77.178731975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:46:57",
+            "type": "SELL",
+            "price": 146.63,
+            "quantity": 0.8221951645297689,
+            "value_usd": 120.55847697500002,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:51:48",
+            "type": "BUY",
+            "price": 146.63,
+            "quantity": 1.5047801403191707,
+            "value_usd": 220.645911975,
+            "status": "FILLED",
+            "pnl": 0.39139784854789694
+          },
+          {
+            "timestamp": "2025-04-30 18:53:05",
+            "type": "BUY",
+            "price": 146.84,
+            "quantity": 1.7601342343707436,
+            "value_usd": 258.458110975,
+            "status": "FILLED",
+            "pnl": 0.26955578764272126
+          },
+          {
+            "timestamp": "2025-04-30 18:54:22",
+            "type": "BUY",
+            "price": 147.0,
+            "quantity": 1.2363229658163266,
+            "value_usd": 181.739475975,
+            "status": "FILLED",
+            "pnl": 0.03455795028757278
+          },
+          {
+            "timestamp": "2025-04-30 18:55:35",
+            "type": "BUY",
+            "price": 146.94,
+            "quantity": 1.1593565807472437,
+            "value_usd": 170.355855975,
+            "status": "FILLED",
+            "pnl": 0.04915478714356288
+          },
+          {
+            "timestamp": "2025-04-30 18:56:50",
+            "type": "BUY",
+            "price": 146.83,
+            "quantity": 1.6984265373220728,
+            "value_usd": 249.37996847499997,
+            "status": "FILLED",
+            "pnl": -0.10495411599904028
+          },
+          {
+            "timestamp": "2025-04-30 18:58:00",
+            "type": "BUY",
+            "price": 146.89,
+            "quantity": 1.273406177922255,
+            "value_usd": 187.050633475,
+            "status": "FILLED",
+            "pnl": -0.037644165551351735
+          },
+          {
+            "timestamp": "2025-04-30 18:59:15",
+            "type": "SELL",
+            "price": 146.82,
+            "quantity": 0.5377737935907915,
+            "value_usd": 78.955948375,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:00:30",
+            "type": "SELL",
+            "price": 146.79,
+            "quantity": 1.0495411599904625,
+            "value_usd": 154.06214687499997,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:01:40",
+            "type": "SELL",
+            "price": 146.81,
+            "quantity": 1.3116212749472107,
+            "value_usd": 192.559119375,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:02:51",
+            "type": "SELL",
+            "price": 146.93,
+            "quantity": 1.2288696785884434,
+            "value_usd": 180.557821875,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:04:02",
+            "type": "SELL",
+            "price": 146.92,
+            "quantity": 1.1519316762523824,
+            "value_usd": 169.241801875,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:05:15",
+            "type": "SELL",
+            "price": 147.14,
+            "quantity": 1.078223150570885,
+            "value_usd": 158.64975437500001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:06:29",
+            "type": "SELL",
+            "price": 147.2,
+            "quantity": 1.2625737049932066,
+            "value_usd": 185.850849375,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:18:19",
+            "type": "BUY",
+            "price": 147.13,
+            "quantity": 2.7090236618976413,
+            "value_usd": 398.57865137499994,
+            "status": "FILLED",
+            "pnl": -0.025862999745309707
+          },
+          {
+            "timestamp": "2025-04-30 19:19:30",
+            "type": "BUY",
+            "price": 147.12,
+            "quantity": 2.032141934305329,
+            "value_usd": 298.968721375,
+            "status": "FILLED",
+            "pnl": -0.010345797176369293
+          },
+          {
+            "timestamp": "2025-04-30 19:20:41",
+            "type": "BUY",
+            "price": 147.25,
+            "quantity": 1.5227273438030562,
+            "value_usd": 224.22160137500003,
+            "status": "FILLED",
+            "pnl": -0.00827843759337742
+          },
+          {
+            "timestamp": "2025-04-30 19:21:53",
+            "type": "BUY",
+            "price": 147.25,
+            "quantity": 1.4276158803056027,
+            "value_usd": 210.216438375,
+            "status": "FILLED",
+            "pnl": 0.03972039309958741
+          },
+          {
+            "timestamp": "2025-04-30 19:36:04",
+            "type": "SELL",
+            "price": 147.31,
+            "quantity": 0.6620065516597651,
+            "value_usd": 97.520185125,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:37:17",
+            "type": "SELL",
+            "price": 147.24,
+            "quantity": 0.827843759338495,
+            "value_usd": 121.891715125,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:38:30",
+            "type": "SELL",
+            "price": 147.24,
+            "quantity": 1.0345797176378702,
+            "value_usd": 152.331517625,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:39:42",
+            "type": "SELL",
+            "price": 147.23,
+            "quantity": 1.2931499872648238,
+            "value_usd": 190.390472625,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:40:55",
+            "type": "SELL",
+            "price": 147.24,
+            "quantity": 1.6162902073145884,
+            "value_usd": 237.982570125,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:42:07",
+            "type": "SELL",
+            "price": 147.26,
+            "quantity": 2.019988388734212,
+            "value_usd": 297.463490125,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 09:11:21",
+            "type": "SELL",
+            "price": 147.48,
+            "quantity": 1.2467199032072147,
+            "value_usd": 183.866251325,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:29:00",
+            "type": "BUY",
+            "price": 148.4,
+            "quantity": 2.6404497675202157,
+            "value_usd": 391.84274550000004,
+            "status": "FILLED",
+            "pnl": 1.069282266382678
+          },
+          {
+            "timestamp": "2025-05-01 10:31:37",
+            "type": "BUY",
+            "price": 147.75,
+            "quantity": 1.9886749441624365,
+            "value_usd": 293.826723,
+            "status": "FILLED",
+            "pnl": 0.10081438796011227
+          },
+          {
+            "timestamp": "2025-05-01 10:32:51",
+            "type": "BUY",
+            "price": 147.77,
+            "quantity": 1.491035819178453,
+            "value_usd": 220.330363,
+            "status": "FILLED",
+            "pnl": -0.1455018818748574
+          },
+          {
+            "timestamp": "2025-05-01 10:34:04",
+            "type": "SELL",
+            "price": 147.64,
+            "quantity": 1.1192452451910053,
+            "value_usd": 165.245368,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:35:22",
+            "type": "SELL",
+            "price": 147.73,
+            "quantity": 1.7475060999796928,
+            "value_usd": 258.15907615,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:36:37",
+            "type": "BUY",
+            "price": 147.75,
+            "quantity": 2.1839604307952625,
+            "value_usd": 322.68015365,
+            "status": "FILLED",
+            "pnl": 0.09217644227049679
+          },
+          {
+            "timestamp": "2025-05-01 10:37:52",
+            "type": "BUY",
+            "price": 147.73,
+            "quantity": 1.6384322151898736,
+            "value_usd": 242.04559115,
+            "status": "FILLED",
+            "pnl": 0.012288213154890407
+          },
+          {
+            "timestamp": "2025-05-01 10:39:06",
+            "type": "SELL",
+            "price": 147.74,
+            "quantity": 1.2288213154866658,
+            "value_usd": 181.54606115,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:40:23",
+            "type": "SELL",
+            "price": 147.81,
+            "quantity": 1.1522055283810297,
+            "value_usd": 170.30749915,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:41:34",
+            "type": "SELL",
+            "price": 147.8,
+            "quantity": 1.4402055422868738,
+            "value_usd": 212.86237914999995,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:42:47",
+            "type": "SELL",
+            "price": 147.8,
+            "quantity": 1.8001568278078484,
+            "value_usd": 266.06317915,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:20:54",
+            "type": "SELL",
+            "price": 148.48,
+            "quantity": 1.4257096885102372,
+            "value_usd": 211.68937455,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:03:13",
+            "type": "SELL",
+            "price": 148.81,
+            "quantity": 0.1150676308715812,
+            "value_usd": 17.12321415,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:56:31",
+            "type": "BUY",
+            "price": 148.66,
+            "quantity": 0.5428242203686264,
+            "value_usd": 80.6962486,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:57:54",
+            "type": "BUY",
+            "price": 148.68,
+            "quantity": 0.5090167715899919,
+            "value_usd": 75.6806136,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:59:12",
+            "type": "BUY",
+            "price": 148.67,
+            "quantity": 0.3817924503934889,
+            "value_usd": 56.76108359999999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 14:06:44",
+            "type": "BUY",
+            "price": 148.67,
+            "quantity": 0.26858422075738214,
+            "value_usd": 39.9304161,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 14:08:04",
+            "type": "BUY",
+            "price": 148.74,
+            "quantity": 0.2515148991528842,
+            "value_usd": 37.4103261,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 14:09:19",
+            "type": "BUY",
+            "price": 148.71,
+            "quantity": 0.1887987600026898,
+            "value_usd": 28.0762636,
+            "status": "FILLED"
+          }
+        ],
+        "profit_usd": 2.030118944873683
+      }
+    },
+    "AVAXUSDT": {
+      "MovingAverageCrossover": {
+        "trades": [],
+        "profit_usd": 0.0
+      },
+      "RSIStrategy": {
+        "trades": [
+          {
+            "timestamp": "2025-04-29 17:08:28",
+            "type": "SELL",
+            "price": 22.08,
+            "quantity": 1.1912551573822463,
+            "value_usd": 26.302913874999998,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-29 17:11:46",
+            "type": "SELL",
+            "price": 22.03,
+            "quantity": 2.565960911257376,
+            "value_usd": 56.52811887499999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 14:40:37",
+            "type": "BUY",
+            "price": 21.77,
+            "quantity": 0.8548426676619201,
+            "value_usd": 18.609924875,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 14:41:41",
+            "type": "SELL",
+            "price": 21.77,
+            "quantity": 0.64234266766192,
+            "value_usd": 13.983799874999999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 14:42:46",
+            "type": "SELL",
+            "price": 21.78,
+            "quantity": 1.8916898473370063,
+            "value_usd": 41.201004875,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 14:50:15",
+            "type": "SELL",
+            "price": 21.83,
+            "quantity": 2.358774845396244,
+            "value_usd": 51.492054875,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 14:53:27",
+            "type": "SELL",
+            "price": 21.84,
+            "quantity": 2.9446568166208795,
+            "value_usd": 64.311304875,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:09:27",
+            "type": "BUY",
+            "price": 21.79,
+            "quantity": 3.3674819401101423,
+            "value_usd": 73.377431475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:10:33",
+            "type": "BUY",
+            "price": 21.81,
+            "quantity": 3.6140149690508947,
+            "value_usd": 78.82166647500001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:11:38",
+            "type": "BUY",
+            "price": 21.82,
+            "quantity": 1.6214799026122821,
+            "value_usd": 35.380691475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:16:57",
+            "type": "SELL",
+            "price": 21.79,
+            "quantity": 1.5211682411656726,
+            "value_usd": 33.146255975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:18:26",
+            "type": "BUY",
+            "price": 21.7,
+            "quantity": 4.630347925115208,
+            "value_usd": 100.478549975,
+            "status": "FILLED",
+            "pnl": 0.01026642032688744
+          },
+          {
+            "timestamp": "2025-04-30 16:27:06",
+            "type": "SELL",
+            "price": 21.72,
+            "quantity": 0.513321016344383,
+            "value_usd": 11.149332474999998,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:32:28",
+            "type": "BUY",
+            "price": 21.71,
+            "quantity": 0.9736371476278212,
+            "value_usd": 21.137662475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:40:02",
+            "type": "BUY",
+            "price": 21.66,
+            "quantity": 2.57938490189289,
+            "value_usd": 55.86947697499999,
+            "status": "FILLED",
+            "pnl": -0.15565597328624425
+          },
+          {
+            "timestamp": "2025-04-30 16:49:42",
+            "type": "SELL",
+            "price": 21.64,
+            "quantity": 3.033572757624769,
+            "value_usd": 65.646514475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 17:12:14",
+            "type": "SELL",
+            "price": 21.59,
+            "quantity": 2.2236567612320517,
+            "value_usd": 48.008749474999995,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 17:14:37",
+            "type": "SELL",
+            "price": 21.6,
+            "quantity": 3.47076027662037,
+            "value_usd": 74.968421975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 17:16:55",
+            "type": "SELL",
+            "price": 21.6,
+            "quantity": 4.33745703587963,
+            "value_usd": 93.689071975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:55:37",
+            "type": "SELL",
+            "price": 21.56,
+            "quantity": 5.926446937615956,
+            "value_usd": 127.774195975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:59:18",
+            "type": "SELL",
+            "price": 21.5,
+            "quantity": 4.588953761627907,
+            "value_usd": 98.662505875,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:05:18",
+            "type": "SELL",
+            "price": 21.51,
+            "quantity": 9.218777283821478,
+            "value_usd": 198.295899375,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:47:59",
+            "type": "BUY",
+            "price": 21.68,
+            "quantity": 17.148656832333952,
+            "value_usd": 371.7828801250001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:58:33",
+            "type": "BUY",
+            "price": 21.64,
+            "quantity": 16.105390717421443,
+            "value_usd": 348.520655125,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 09:37:43",
+            "type": "BUY",
+            "price": 20.98,
+            "quantity": 10.271151866062917,
+            "value_usd": 215.48876615,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 09:47:50",
+            "type": "BUY",
+            "price": 20.9,
+            "quantity": 17.673724178229666,
+            "value_usd": 369.38083532499996,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:13:04",
+            "type": "BUY",
+            "price": 20.98,
+            "quantity": 13.603411538369874,
+            "value_usd": 285.399574075,
+            "status": "FILLED",
+            "pnl": 0.0
+          },
+          {
+            "timestamp": "2025-05-01 10:14:23",
+            "type": "SELL",
+            "price": 20.98,
+            "quantity": 12.751790947330793,
+            "value_usd": 267.53257407500007,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:51:09",
+            "type": "BUY",
+            "price": 21.03,
+            "quantity": 14.824950446980504,
+            "value_usd": 311.7687079,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:56:00",
+            "type": "BUY",
+            "price": 21.03,
+            "quantity": 17.362702472658107,
+            "value_usd": 365.137633,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:24:48",
+            "type": "BUY",
+            "price": 21.19,
+            "quantity": 7.024341059462011,
+            "value_usd": 148.84578705,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:11:44",
+            "type": "BUY",
+            "price": 21.22,
+            "quantity": 10.224003277568332,
+            "value_usd": 216.95334955,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:20:17",
+            "type": "BUY",
+            "price": 21.21,
+            "quantity": 9.587317281942479,
+            "value_usd": 203.34699955,
+            "status": "FILLED",
+            "pnl": 0.08284156015144169
+          },
+          {
+            "timestamp": "2025-05-01 12:27:33",
+            "type": "BUY",
+            "price": 21.19,
+            "quantity": 7.199105689004248,
+            "value_usd": 152.54904955,
+            "status": "FILLED",
+            "pnl": 0.161793661003757
+          },
+          {
+            "timestamp": "2025-05-01 12:28:50",
+            "type": "SELL",
+            "price": 21.22,
+            "quantity": 5.393122033459001,
+            "value_usd": 114.44204955,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:58:14",
+            "type": "BUY",
+            "price": 21.09,
+            "quantity": 5.400327603129445,
+            "value_usd": 113.89290915,
+            "status": "FILLED",
+            "pnl": 0.01014289177725277
+          },
+          {
+            "timestamp": "2025-05-01 13:03:19",
+            "type": "SELL",
+            "price": 21.1,
+            "quantity": 1.0142891777251184,
+            "value_usd": 21.40150165,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:08:33",
+            "type": "SELL",
+            "price": 21.13,
+            "quantity": 2.0710390037860864,
+            "value_usd": 43.76105415000001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:19:26",
+            "type": "BUY",
+            "price": 21.04,
+            "quantity": 7.9065271221482885,
+            "value_usd": 166.35333064999998,
+            "status": "FILLED",
+            "pnl": 0.02859687604961771
+          },
+          {
+            "timestamp": "2025-05-01 14:02:59",
+            "type": "BUY",
+            "price": 20.94,
+            "quantity": 2.034396661891117,
+            "value_usd": 42.60026609999999,
+            "status": "FILLED",
+            "pnl": 0.03050879398854897
+          },
+          {
+            "timestamp": "2025-05-01 14:05:28",
+            "type": "SELL",
+            "price": 20.96,
+            "quantity": 1.525439699427481,
+            "value_usd": 31.973216100000005,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 14:06:48",
+            "type": "SELL",
+            "price": 20.96,
+            "quantity": 1.429843802480916,
+            "value_usd": 29.9695261,
+            "status": "FILLED"
+          }
+        ],
+        "profit_usd": 0.12285918277628942
+      },
+      "BollingerBandStrategy": {
+        "trades": [],
+        "profit_usd": 0.0
+      },
+      "RelativeStrengthStrategy": {
+        "trades": [],
+        "profit_usd": 0.0
+      },
+      "EnhancedRSIStrategy": {
+        "trades": [],
+        "profit_usd": 0.0
+      },
+      "RSIDivergenceStrategy": {
+        "trades": [
+          {
+            "timestamp": "2025-04-30 15:44:45",
+            "type": "BUY",
+            "price": 21.7,
+            "quantity": 1.122299353686636,
+            "value_usd": 24.353895974999997,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:45:49",
+            "type": "BUY",
+            "price": 21.66,
+            "quantity": 0.6333096018005541,
+            "value_usd": 13.717485975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:53:06",
+            "type": "BUY",
+            "price": 21.63,
+            "quantity": 0.6950618804900602,
+            "value_usd": 15.034188475000002,
+            "status": "FILLED",
+            "pnl": 0.020746936945984167
+          },
+          {
+            "timestamp": "2025-04-30 15:54:10",
+            "type": "SELL",
+            "price": 21.66,
+            "quantity": 0.6915645648661127,
+            "value_usd": 14.979288475000002,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:55:15",
+            "type": "BUY",
+            "price": 21.65,
+            "quantity": 1.08013734295612,
+            "value_usd": 23.384973475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:56:18",
+            "type": "BUY",
+            "price": 21.64,
+            "quantity": 0.8106364822088723,
+            "value_usd": 17.542173475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:57:22",
+            "type": "BUY",
+            "price": 21.66,
+            "quantity": 0.6074814623730378,
+            "value_usd": 13.158048475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:58:27",
+            "type": "BUY",
+            "price": 21.64,
+            "quantity": 0.6277055672365989,
+            "value_usd": 13.583548475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 15:59:31",
+            "type": "BUY",
+            "price": 21.64,
+            "quantity": 0.6425761772181147,
+            "value_usd": 13.905348475000002,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:00:36",
+            "type": "BUY",
+            "price": 21.63,
+            "quantity": 1.9739001837725385,
+            "value_usd": 42.695460975,
+            "status": "FILLED",
+            "pnl": 0.018494331550372577
+          },
+          {
+            "timestamp": "2025-04-30 16:01:41",
+            "type": "SELL",
+            "price": 21.64,
+            "quantity": 1.8494331550369685,
+            "value_usd": 40.021733475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:02:45",
+            "type": "SELL",
+            "price": 21.64,
+            "quantity": 2.885725322319778,
+            "value_usd": 62.447095974999996,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:17:20",
+            "type": "BUY",
+            "price": 21.69,
+            "quantity": 4.94175311088059,
+            "value_usd": 107.18662497500002,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:18:26",
+            "type": "BUY",
+            "price": 21.7,
+            "quantity": 3.4723145149769583,
+            "value_usd": 75.349224975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:19:32",
+            "type": "BUY",
+            "price": 21.67,
+            "quantity": 3.2594914616982,
+            "value_usd": 70.63317997499999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:20:36",
+            "type": "BUY",
+            "price": 21.68,
+            "quantity": 3.055812844787823,
+            "value_usd": 66.250022475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:21:41",
+            "type": "BUY",
+            "price": 21.68,
+            "quantity": 2.865925275599631,
+            "value_usd": 62.133259975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:22:46",
+            "type": "BUY",
+            "price": 21.69,
+            "quantity": 4.053321229829415,
+            "value_usd": 87.91653747500001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:23:51",
+            "type": "BUY",
+            "price": 21.7,
+            "quantity": 3.798338362903226,
+            "value_usd": 82.423942475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:24:56",
+            "type": "BUY",
+            "price": 21.71,
+            "quantity": 2.8490887828189773,
+            "value_usd": 61.853717474999996,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:26:01",
+            "type": "BUY",
+            "price": 21.72,
+            "quantity": 2.1381039353130755,
+            "value_usd": 46.439617475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:27:07",
+            "type": "BUY",
+            "price": 21.72,
+            "quantity": 0.6407623146869245,
+            "value_usd": 13.917357475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:28:11",
+            "type": "BUY",
+            "price": 21.72,
+            "quantity": 0.48076231468692454,
+            "value_usd": 10.442157475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:29:16",
+            "type": "BUY",
+            "price": 21.73,
+            "quantity": 0.36054107109986194,
+            "value_usd": 7.834557475,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:30:20",
+            "type": "BUY",
+            "price": 21.73,
+            "quantity": 0.2705410710998619,
+            "value_usd": 5.878857474999999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:31:24",
+            "type": "BUY",
+            "price": 21.73,
+            "quantity": 1.2953894374137136,
+            "value_usd": 28.148812474999996,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:32:29",
+            "type": "BUY",
+            "price": 21.71,
+            "quantity": 0.7311371476278212,
+            "value_usd": 15.872987474999999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:33:33",
+            "type": "BUY",
+            "price": 21.71,
+            "quantity": 0.34067998502994007,
+            "value_usd": 7.396162474999999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 16:34:39",
+            "type": "BUY",
+            "price": 21.71,
+            "quantity": 0.46363829917088895,
+            "value_usd": 10.065587475,
+            "status": "FILLED",
+            "pnl": 1.5624766504992995
+          },
+          {
+            "timestamp": "2025-04-30 17:01:45",
+            "type": "BUY",
+            "price": 21.62,
+            "quantity": 2.8468244438020354,
+            "value_usd": 61.54834447500001,
+            "status": "FILLED",
+            "pnl": 1.334182641369483
+          },
+          {
+            "timestamp": "2025-04-30 17:02:58",
+            "type": "BUY",
+            "price": 21.62,
+            "quantity": 1.6040196334412584,
+            "value_usd": 34.67890447500001,
+            "status": "FILLED",
+            "pnl": 0.07405760481213741
+          },
+          {
+            "timestamp": "2025-04-30 17:04:11",
+            "type": "BUY",
+            "price": 21.64,
+            "quantity": 0.9034225727818854,
+            "value_usd": 19.550064475000003,
+            "status": "FILLED",
+            "pnl": -0.06328814112117981
+          },
+          {
+            "timestamp": "2025-04-30 17:05:03",
+            "type": "BUY",
+            "price": 21.63,
+            "quantity": 0.5088564251040222,
+            "value_usd": 11.006564475,
+            "status": "FILLED",
+            "pnl": -0.18007293169994973
+          },
+          {
+            "timestamp": "2025-04-30 18:45:46",
+            "type": "SELL",
+            "price": 21.57,
+            "quantity": 4.471673712331943,
+            "value_usd": 96.45400197500001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:47:00",
+            "type": "SELL",
+            "price": 21.56,
+            "quantity": 6.989280471938776,
+            "value_usd": 150.688886975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:48:12",
+            "type": "SELL",
+            "price": 21.56,
+            "quantity": 8.73347110273655,
+            "value_usd": 188.293636975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:49:24",
+            "type": "SELL",
+            "price": 21.56,
+            "quantity": 10.914958811456401,
+            "value_usd": 235.326511975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:50:37",
+            "type": "BUY",
+            "price": 21.55,
+            "quantity": 13.648789418793502,
+            "value_usd": 294.131411975,
+            "status": "FILLED",
+            "pnl": 0.0
+          },
+          {
+            "timestamp": "2025-04-30 18:51:52",
+            "type": "SELL",
+            "price": 21.55,
+            "quantity": 7.680244639211136,
+            "value_usd": 165.509271975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:53:08",
+            "type": "SELL",
+            "price": 21.53,
+            "quantity": 9.003646584997679,
+            "value_usd": 193.84851097500004,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:54:25",
+            "type": "SELL",
+            "price": 21.54,
+            "quantity": 6.328814112116992,
+            "value_usd": 136.322655975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:55:40",
+            "type": "SELL",
+            "price": 21.56,
+            "quantity": 7.405760481215214,
+            "value_usd": 159.668195975,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 18:58:03",
+            "type": "BUY",
+            "price": 21.52,
+            "quantity": 6.520390496050187,
+            "value_usd": 140.318803475,
+            "status": "FILLED",
+            "pnl": 0.7141253663131583
+          },
+          {
+            "timestamp": "2025-04-30 19:01:42",
+            "type": "BUY",
+            "price": 21.49,
+            "quantity": 11.19944610865519,
+            "value_usd": 240.676096875,
+            "status": "FILLED",
+            "pnl": -5.392730998760156
+          },
+          {
+            "timestamp": "2025-04-30 19:02:54",
+            "type": "BUY",
+            "price": 21.49,
+            "quantity": 10.50037468008376,
+            "value_usd": 225.653051875,
+            "status": "FILLED",
+            "pnl": -4.235662363322217
+          },
+          {
+            "timestamp": "2025-04-30 19:04:05",
+            "type": "BUY",
+            "price": 21.49,
+            "quantity": 9.842492060260588,
+            "value_usd": 211.515154375,
+            "status": "FILLED",
+            "pnl": 0.0
+          },
+          {
+            "timestamp": "2025-04-30 19:05:21",
+            "type": "BUY",
+            "price": 21.51,
+            "quantity": 11.520206851464435,
+            "value_usd": 247.799649375,
+            "status": "FILLED",
+            "pnl": -0.30395378982559296
+          },
+          {
+            "timestamp": "2025-04-30 19:06:32",
+            "type": "BUY",
+            "price": 21.53,
+            "quantity": 10.789245210171853,
+            "value_usd": 232.292449375,
+            "status": "FILLED",
+            "pnl": -0.16206048291491984
+          },
+          {
+            "timestamp": "2025-04-30 19:07:43",
+            "type": "SELL",
+            "price": 21.51,
+            "quantity": 8.103024145746165,
+            "value_usd": 174.29604937500002,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:08:53",
+            "type": "SELL",
+            "price": 21.5,
+            "quantity": 10.131792994186048,
+            "value_usd": 217.83354937500005,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:10:05",
+            "type": "SELL",
+            "price": 21.5,
+            "quantity": 12.664292994186047,
+            "value_usd": 272.28229937500004,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:11:16",
+            "type": "SELL",
+            "price": 21.5,
+            "quantity": 15.829292994186046,
+            "value_usd": 340.329799375,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:23:06",
+            "type": "SELL",
+            "price": 21.53,
+            "quantity": 5.493935363446354,
+            "value_usd": 118.28442837500002,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:48:02",
+            "type": "SELL",
+            "price": 21.68,
+            "quantity": 12.861680356319187,
+            "value_usd": 278.841230125,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-04-30 19:58:37",
+            "type": "SELL",
+            "price": 21.64,
+            "quantity": 12.07853073590573,
+            "value_usd": 261.379405125,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 09:37:47",
+            "type": "SELL",
+            "price": 20.98,
+            "quantity": 7.701204296949476,
+            "value_usd": 161.57126615,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 09:39:02",
+            "type": "SELL",
+            "price": 20.97,
+            "quantity": 9.629876783500238,
+            "value_usd": 201.93851615,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 09:47:53",
+            "type": "SELL",
+            "price": 20.9,
+            "quantity": 13.254110541866028,
+            "value_usd": 277.010910325,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 09:59:43",
+            "type": "BUY",
+            "price": 20.91,
+            "quantity": 16.558687724772835,
+            "value_usd": 346.242160325,
+            "status": "FILLED",
+            "pnl": 0.12413272482076508
+          },
+          {
+            "timestamp": "2025-05-01 10:00:55",
+            "type": "SELL",
+            "price": 20.92,
+            "quantity": 12.413272482074568,
+            "value_usd": 259.68566032499996,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:13:08",
+            "type": "SELL",
+            "price": 20.98,
+            "quantity": 10.20179094733079,
+            "value_usd": 214.033574075,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:51:13",
+            "type": "SELL",
+            "price": 21.03,
+            "quantity": 11.118188678078933,
+            "value_usd": 233.81550789999997,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 10:56:04",
+            "type": "SELL",
+            "price": 21.03,
+            "quantity": 13.020638754160721,
+            "value_usd": 273.824033,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:22:12",
+            "type": "BUY",
+            "price": 21.24,
+            "quantity": 12.456770812146894,
+            "value_usd": 264.58181205,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:23:31",
+            "type": "BUY",
+            "price": 21.23,
+            "quantity": 9.347206172868582,
+            "value_usd": 198.44118705,
+            "status": "FILLED",
+            "pnl": -0.049422585953737656
+          },
+          {
+            "timestamp": "2025-05-01 11:24:53",
+            "type": "BUY",
+            "price": 21.19,
+            "quantity": 5.268512838603114,
+            "value_usd": 111.63978705,
+            "status": "FILLED",
+            "pnl": 0.0395102769103695
+          },
+          {
+            "timestamp": "2025-05-01 11:26:13",
+            "type": "SELL",
+            "price": 21.2,
+            "quantity": 3.9510276910377358,
+            "value_usd": 83.76178705,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:27:30",
+            "type": "SELL",
+            "price": 21.18,
+            "quantity": 4.942258595372993,
+            "value_usd": 104.67703705,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:28:53",
+            "type": "SELL",
+            "price": 21.18,
+            "quantity": 6.176675498111425,
+            "value_usd": 130.82198705,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:30:13",
+            "type": "SELL",
+            "price": 21.17,
+            "quantity": 7.7228217784600846,
+            "value_usd": 163.49213705,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:31:28",
+            "type": "SELL",
+            "price": 21.17,
+            "quantity": 9.652821778460085,
+            "value_usd": 204.35023705000003,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:38:50",
+            "type": "BUY",
+            "price": 21.22,
+            "quantity": 12.035755751649386,
+            "value_usd": 255.39873704999997,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:40:09",
+            "type": "BUY",
+            "price": 21.17,
+            "quantity": 9.048158339631554,
+            "value_usd": 191.54951205,
+            "status": "FILLED",
+            "pnl": -0.1358915480378463
+          },
+          {
+            "timestamp": "2025-05-01 11:45:56",
+            "type": "SELL",
+            "price": 21.15,
+            "quantity": 6.794577401891254,
+            "value_usd": 143.70531205,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:47:14",
+            "type": "BUY",
+            "price": 21.14,
+            "quantity": 8.49609446783349,
+            "value_usd": 179.60743705,
+            "status": "FILLED",
+            "pnl": -0.059813760440329
+          },
+          {
+            "timestamp": "2025-05-01 11:48:30",
+            "type": "BUY",
+            "price": 21.13,
+            "quantity": 6.376610840037862,
+            "value_usd": 134.73778705,
+            "status": "FILLED",
+            "pnl": 0.0
+          },
+          {
+            "timestamp": "2025-05-01 11:49:49",
+            "type": "SELL",
+            "price": 21.13,
+            "quantity": 4.784110840037861,
+            "value_usd": 101.08826205,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:51:08",
+            "type": "SELL",
+            "price": 21.12,
+            "quantity": 5.98137604403409,
+            "value_usd": 126.32666205,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:52:29",
+            "type": "SELL",
+            "price": 21.1,
+            "quantity": 7.4820455947867295,
+            "value_usd": 157.87116205,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:53:47",
+            "type": "SELL",
+            "price": 21.09,
+            "quantity": 9.356479945471788,
+            "value_usd": 197.32816205,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 11:55:04",
+            "type": "SELL",
+            "price": 21.11,
+            "quantity": 11.682900855045002,
+            "value_usd": 246.62603704999998,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:11:47",
+            "type": "SELL",
+            "price": 21.22,
+            "quantity": 7.667799224787935,
+            "value_usd": 162.71069955,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:30:09",
+            "type": "SELL",
+            "price": 21.22,
+            "quantity": 6.740622033459002,
+            "value_usd": 143.03599955,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:41:05",
+            "type": "BUY",
+            "price": 21.23,
+            "quantity": 5.925164327602449,
+            "value_usd": 125.79123867499999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:42:19",
+            "type": "BUY",
+            "price": 21.17,
+            "quantity": 4.457063706896551,
+            "value_usd": 94.356038675,
+            "status": "FILLED",
+            "pnl": 0.0
+          },
+          {
+            "timestamp": "2025-05-01 12:43:33",
+            "type": "BUY",
+            "price": 21.16,
+            "quantity": 3.3461443135633275,
+            "value_usd": 70.804413675,
+            "status": "FILLED",
+            "pnl": 0.025095637068969435
+          },
+          {
+            "timestamp": "2025-05-01 12:44:49",
+            "type": "SELL",
+            "price": 21.17,
+            "quantity": 2.509563706896551,
+            "value_usd": 53.12746367499999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:46:02",
+            "type": "SELL",
+            "price": 21.16,
+            "quantity": 3.136045069706994,
+            "value_usd": 66.35871367499999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:47:17",
+            "type": "SELL",
+            "price": 21.16,
+            "quantity": 3.9185450697069943,
+            "value_usd": 82.916413675,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:48:32",
+            "type": "SELL",
+            "price": 21.16,
+            "quantity": 4.895583113185255,
+            "value_usd": 103.590538675,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:49:47",
+            "type": "SELL",
+            "price": 21.15,
+            "quantity": 6.120975823877069,
+            "value_usd": 129.458638675,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:58:18",
+            "type": "BUY",
+            "price": 21.09,
+            "quantity": 4.050327603129445,
+            "value_usd": 85.42140915,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 12:59:35",
+            "type": "BUY",
+            "price": 21.07,
+            "quantity": 1.9155785073564313,
+            "value_usd": 40.36123915000001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:00:47",
+            "type": "BUY",
+            "price": 21.07,
+            "quantity": 1.4378518818224966,
+            "value_usd": 30.295539150000003,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:02:00",
+            "type": "BUY",
+            "price": 21.08,
+            "quantity": 1.0796697888994307,
+            "value_usd": 22.759439149999995,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:03:34",
+            "type": "BUY",
+            "price": 21.1,
+            "quantity": 1.2666695094786729,
+            "value_usd": 26.72672665,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:04:50",
+            "type": "BUY",
+            "price": 21.11,
+            "quantity": 0.9510694765513974,
+            "value_usd": 20.07707665,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:06:03",
+            "type": "BUY",
+            "price": 21.12,
+            "quantity": 0.713119159564394,
+            "value_usd": 15.061076650000002,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:07:19",
+            "type": "SELL",
+            "price": 21.12,
+            "quantity": 1.6595468347537876,
+            "value_usd": 35.049629149999994,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:08:37",
+            "type": "SELL",
+            "price": 21.13,
+            "quantity": 2.5882940913393284,
+            "value_usd": 54.69065415000001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:09:50",
+            "type": "SELL",
+            "price": 21.11,
+            "quantity": 3.236051830885836,
+            "value_usd": 68.31305415,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:11:03",
+            "type": "SELL",
+            "price": 21.1,
+            "quantity": 4.045085504739337,
+            "value_usd": 85.35130415000002,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:19:29",
+            "type": "SELL",
+            "price": 21.04,
+            "quantity": 5.931527122148289,
+            "value_usd": 124.79933064999999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:35:11",
+            "type": "BUY",
+            "price": 21.08,
+            "quantity": 4.885524127134725,
+            "value_usd": 102.9868486,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:36:28",
+            "type": "BUY",
+            "price": 21.11,
+            "quantity": 2.5372832117479867,
+            "value_usd": 53.5620486,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:37:43",
+            "type": "BUY",
+            "price": 21.13,
+            "quantity": 1.902680955986749,
+            "value_usd": 40.20364860000001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:38:58",
+            "type": "BUY",
+            "price": 21.12,
+            "quantity": 1.4283569412878787,
+            "value_usd": 30.1668986,
+            "status": "FILLED",
+            "pnl": -0.04030782838158433
+          },
+          {
+            "timestamp": "2025-05-01 13:40:13",
+            "type": "BUY",
+            "price": 21.11,
+            "quantity": 1.0736972335386072,
+            "value_usd": 22.665748599999997,
+            "status": "FILLED",
+            "pnl": -0.016136698530108712
+          },
+          {
+            "timestamp": "2025-05-01 13:41:28",
+            "type": "SELL",
+            "price": 21.09,
+            "quantity": 0.8068349265054529,
+            "value_usd": 17.0161486,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:42:44",
+            "type": "SELL",
+            "price": 21.07,
+            "quantity": 1.0076957095396297,
+            "value_usd": 21.2321486,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:44:01",
+            "type": "SELL",
+            "price": 21.02,
+            "quantity": 1.2603305708848715,
+            "value_usd": 26.4921486,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:45:19",
+            "type": "SELL",
+            "price": 21.03,
+            "quantity": 1.5745814835948644,
+            "value_usd": 33.1134486,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:46:34",
+            "type": "SELL",
+            "price": 21.03,
+            "quantity": 1.9668948454588682,
+            "value_usd": 41.3637986,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:47:49",
+            "type": "SELL",
+            "price": 21.0,
+            "quantity": 2.460171361904762,
+            "value_usd": 51.6635986,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:55:17",
+            "type": "SELL",
+            "price": 20.95,
+            "quantity": 3.0822171169451074,
+            "value_usd": 64.5724486,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 13:56:37",
+            "type": "SELL",
+            "price": 20.94,
+            "quantity": 2.8916649283667617,
+            "value_usd": 60.55146359999999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 14:09:24",
+            "type": "BUY",
+            "price": 20.96,
+            "quantity": 1.0059419656488549,
+            "value_usd": 21.0845436,
+            "status": "FILLED",
+            "pnl": -0.015135667239732243
+          },
+          {
+            "timestamp": "2025-05-01 14:10:41",
+            "type": "SELL",
+            "price": 20.94,
+            "quantity": 0.7567833619866283,
+            "value_usd": 15.847043599999997,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-01 14:13:16",
+            "type": "BUY",
+            "price": 20.95,
+            "quantity": 0.7084797780429595,
+            "value_usd": 14.84265135,
+            "status": "FILLED"
+          }
+        ],
+        "profit_usd": -6.741654625936815
+      }
+    }
+  },
+  "strategy_performance": {
+    "MovingAverageCrossover": {
+      "total_trades": 21,
+      "winning_trades": 3,
+      "realized_profit": 0.6213317746353609,
+      "unrealized_profit": 0.06400999999999477,
+      "open_positions": 1
+    },
+    "RSIStrategy": {
+      "total_trades": 85,
+      "winning_trades": 9,
+      "realized_profit": -13.259937369270084,
+      "unrealized_profit": -10.65763097202313,
+      "open_positions": 8
+    },
+    "BollingerBandStrategy": {
+      "total_trades": 42,
+      "winning_trades": 6,
+      "realized_profit": -0.9486567042277729,
+      "unrealized_profit": 0.67525677361957,
+      "open_positions": 6
+    },
+    "RSIDivergenceStrategy": {
+      "total_trades": 207,
+      "winning_trades": 15,
+      "realized_profit": -112.51092831965492,
+      "unrealized_profit": -0.470594449632499,
+      "open_positions": 5
+    }
+  },
+  "pair_performance": {
+    "BTCUSDT": {
+      "total_trades": 64,
+      "winning_trades": 10,
+      "win_rate": 15.625,
+      "realized_profit": -0.4358212053260012,
+      "unrealized_profit": 0.24214795080440804,
+      "open_positions": 4
+    },
+    "ETHUSDT": {
+      "total_trades": 42,
+      "winning_trades": 6,
+      "win_rate": 14.285714285714285,
+      "realized_profit": -0.9486567042277729,
+      "unrealized_profit": 0.6823430087398439,
+      "open_positions": 6
+    },
+    "SOLUSDT": {
+      "total_trades": 88,
+      "winning_trades": 13,
+      "win_rate": 14.772727272727273,
+      "realized_profit": -0.14967707064869978,
+      "unrealized_profit": 0.10373196048286148,
+      "open_positions": 6
+    },
+    "AVAXUSDT": {
+      "total_trades": 161,
+      "winning_trades": 4,
+      "win_rate": 2.484472049689441,
+      "realized_profit": -124.56403563831495,
+      "unrealized_profit": -12.270270363624903,
+      "open_positions": 13
+    }
+  },
+  "last_updated": "2025-05-01T14:13:20.302884"
+}
