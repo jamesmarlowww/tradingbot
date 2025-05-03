@@ -7,7 +7,7 @@ from indicators.momentum import calculate_rsi, calculate_macd
 from indicators.volatility import calculate_bollinger_bands, calculate_atr
 from indicators.price_action import calculate_price_features
 from trading.execution import TradeExecutor
-from trading.strategies import MovingAverageCrossover, RSIStrategy, BollingerBandStrategy, RelativeStrengthStrategy, EnhancedRSIStrategy, RSIDivergenceStrategy
+from trading.strategies import MovingAverageCrossover, RSIStrategy, BollingerBandStrategy, RelativeStrengthStrategy, EnhancedRSIStrategy, RSIDivergenceStrategy, TrendFollowingStrategy
 import logging
 import json
 from datetime import datetime
@@ -30,45 +30,47 @@ if TESTNET:
 
 # Define trading symbols (only those available on Testnet)
 symbols = {
-    "BTC": "BTCUSDT",
     "ETH": "ETHUSDT", 
     "SOL": "SOLUSDT",
-    "AVAX": "AVAXUSDT"  # Keep this one
-    # "MATIC": "MATICUSDT"  # Remove this - not available on Testnet
+    "LINK": "LINKUSDT"
 }
 
-# Performance tracking
+# Risk management parameters - Using same settings as backtest bot
+max_position_size = 0.05  # Maximum 5% of balance per position
+stop_loss_pct = 0.02     # 2% stop loss
+take_profit_pct = 0.06   # 6% take profit
+max_risk_per_trade = 0.01  # Maximum 1% risk per trade
+max_drawdown_limit = 0.2   # Maximum 20% drawdown
+
+# Initialize account balance tracking
+initial_balance = 10000  # Starting balance
+current_balance = initial_balance
+available_balance = initial_balance
+unrealized_pnl = 0
+max_drawdown = 0
+peak_balance = initial_balance
+
+# Initialize trade history
 trade_history = {}
 for symbol in symbols.values():
     trade_history[symbol] = {
-        'MovingAverageCrossover': {'trades': [], 'profit_usd': 0.0},
-        'RSIStrategy': {'trades': [], 'profit_usd': 0.0},
-        'BollingerBandStrategy': {'trades': [], 'profit_usd': 0.0},
-        'RelativeStrengthStrategy': {'trades': [], 'profit_usd': 0.0},
         'EnhancedRSIStrategy': {'trades': [], 'profit_usd': 0.0},
-        'RSIDivergenceStrategy': {'trades': [], 'profit_usd': 0.0}
+        'TrendFollowingStrategy': {'trades': [], 'profit_usd': 0.0}
     }
 
 # Initialize strategies for each symbol
 strategies = {}
 for symbol in symbols.values():
     strategies[symbol] = {
-        'MovingAverageCrossover': MovingAverageCrossover(short_window=7, long_window=25),
-        'RSIStrategy': RSIStrategy(rsi_period=14, overbought=70, oversold=30),
-        'BollingerBandStrategy': BollingerBandStrategy(strategy_type='reversion'),
-        'RelativeStrengthStrategy': RelativeStrengthStrategy(lookback_period=24, threshold=5.0),
-        # Add the missing strategies:
-        'EnhancedRSIStrategy': EnhancedRSIStrategy(rsi_period=10, oversold_threshold=25, overbought_threshold=75, volatility_factor=0.5),
-        'RSIDivergenceStrategy': RSIDivergenceStrategy(rsi_period=14, divergence_threshold=0.1)
+        'EnhancedRSIStrategy': EnhancedRSIStrategy(rsi_period=3, oversold_threshold=45, overbought_threshold=55, volatility_factor=0.01, trend_period=3),
+        'TrendFollowingStrategy': TrendFollowingStrategy(period=3, threshold=0.001)
     }
 
 # Choose which strategies to use for each symbol
 active_strategies = {
-    "BTCUSDT": ['RSIStrategy', 'MovingAverageCrossover'],
-    "ETHUSDT": ['BollingerBandStrategy', 'RelativeStrengthStrategy'],
-    "SOLUSDT": ['EnhancedRSIStrategy', 'RSIDivergenceStrategy'], 
-    "AVAXUSDT": ['RSIStrategy', 'RSIDivergenceStrategy']
-    # Remove MATICUSDT from active_strategies as well
+    "ETHUSDT": ['EnhancedRSIStrategy'],  # 4h timeframe
+    "SOLUSDT": ['TrendFollowingStrategy'],  # 1h timeframe
+    "LINKUSDT": ['EnhancedRSIStrategy']     # 4h timeframe
 }
 
 # Create trade executors for each symbol
@@ -85,9 +87,20 @@ def analyze_market():
         
         # First pass: Get data for all symbols
         for coin, symbol in symbols.items():
-            logger.info(f"Processing {coin} ({symbol})")
-            # Get klines data
-            klines = client.get_klines(symbol=symbol, interval=Client.KLINE_INTERVAL_1MINUTE, limit=100)
+            logger.info(f"\n=== Data Update for {coin} ({symbol}) ===")
+            
+            # Set appropriate timeframe for each pair
+            if symbol == "SOLUSDT":
+                interval = Client.KLINE_INTERVAL_1HOUR
+                timeframe = "1-hour"
+            else:  # ETHUSDT and LINKUSDT
+                interval = Client.KLINE_INTERVAL_4HOUR
+                timeframe = "4-hour"
+            
+            logger.info(f"Fetching {timeframe} candles for {symbol}")
+            
+            # Get klines data with appropriate timeframe
+            klines = client.get_klines(symbol=symbol, interval=interval, limit=100)
             
             # Create dataframe
             df = pd.DataFrame(klines, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume', 'close_time', 
@@ -98,13 +111,14 @@ def analyze_market():
                 df[col] = pd.to_numeric(df[col])
             
             # Calculate indicators
+            logger.info(f"Calculating indicators for {symbol} using {timeframe} timeframe")
             df['rsi'] = calculate_rsi(df['close'])
             df['macd'], df['signal'], df['histogram'] = calculate_macd(df['close'])
             df['upper_band'], df['middle_band'], df['lower_band'] = calculate_bollinger_bands(df['close'])
             df['atr'] = calculate_atr(df['high'], df['low'], df['close'])
             
             all_data[symbol] = df
-            logger.info(f"Calculated indicators for {symbol}")
+            logger.info(f"Data update complete for {symbol}")
         
         # Second pass: Generate signals with comparisons for RelativeStrengthStrategy
         for coin, symbol in symbols.items():
@@ -127,7 +141,8 @@ def analyze_market():
                     # Log signal information
                     if signals is not None and not signals.empty:
                         latest_signal = signals.iloc[-1]
-                        logger.info(f"{symbol} - {strategy_name} latest signal: position={latest_signal.get('position', 'N/A')}, signal={latest_signal.get('signal', 'N/A')}")
+                        signal_type = "BUY" if latest_signal['position'] > 0 else "SELL" if latest_signal['position'] < 0 else "NEUTRAL"
+                        logger.info(f"{symbol} - {strategy_name} latest signal: {signal_type}")
                         
                         # For RSI strategies, log the RSI value
                         if 'rsi' in latest_signal:
@@ -137,7 +152,7 @@ def analyze_market():
                         if strategy_name == 'EnhancedRSIStrategy' and 'oversold_threshold' in latest_signal:
                             logger.info(f"{symbol} - {strategy_name} thresholds: oversold={latest_signal['oversold_threshold']:.2f}, overbought={latest_signal.get('overbought_threshold', 'N/A')}")
                     else:
-                        logger.warning(f"{symbol} - {strategy_name} generated no signals")
+                        logger.info(f"{symbol} - {strategy_name} generated no signals")
                     
                     symbol_signals[strategy_name] = signals
                 except Exception as e:
@@ -175,24 +190,21 @@ def execute_trades(all_signals, all_data):
             latest_signal = signals.iloc[-1]
             
             if latest_signal['position'] > 0:  # Buy signal
-                logger.info(f"{symbol} - BUY SIGNAL from {strategy_name}: Price = {current_price}")
+                logger.info(f"\n=== TRADE EXECUTION: {symbol} - BUY SIGNAL from {strategy_name} ===")
+                logger.info(f"Current Price: ${current_price:.2f}")
+                
                 # Calculate position size (1% risk, 2% stop loss)
                 quantity = trade_executors[symbol].calculate_position_size(current_price, risk_percent=0.5, stop_loss_percent=2.0)
-                
-                # Log additional info for RelativeStrengthStrategy
-                if strategy_name == 'RelativeStrengthStrategy' and 'primary_change' in latest_signal:
-                    logger.info(f"  {symbol} {latest_signal['primary_change']:.2f}% vs {latest_signal['comparisons']}")
                 
                 # Execute buy order
                 order = trade_executors[symbol].place_market_order(side='BUY', quantity=quantity)
                 
                 if order:
-                    # Simplified order execution log
                     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                     value_usd = current_price * quantity
-                    logger.info(f"{timestamp} - {symbol} - {strategy_name} - BUY - ${value_usd:.2f}")
+                    logger.info(f"TRADE EXECUTED: {timestamp} - {symbol} - {strategy_name} - BUY - ${value_usd:.2f}")
                     
-                    # Record trade for P&L tracking
+                    # Record trade
                     trade_history[symbol][strategy_name]['trades'].append({
                         'timestamp': timestamp,
                         'type': 'BUY',
@@ -202,25 +214,25 @@ def execute_trades(all_signals, all_data):
                         'status': order.get('status', 'TEST')
                     })
                     
-                    # Save trade history
+                    # Save trade history and display updated performance
                     save_trade_history()
+                    display_performance_summary()
+                    display_strategy_performance()
+                    display_pair_performance()
                     
             elif latest_signal['position'] < 0:  # Sell signal
-                logger.info(f"{symbol} - SELL SIGNAL from {strategy_name}: Price = {current_price}")
-                quantity = trade_executors[symbol].calculate_position_size(current_price, risk_percent=0.5, stop_loss_percent=2.0)
+                logger.info(f"\n=== TRADE EXECUTION: {symbol} - SELL SIGNAL from {strategy_name} ===")
+                logger.info(f"Current Price: ${current_price:.2f}")
                 
-                # Log additional info for RelativeStrengthStrategy
-                if strategy_name == 'RelativeStrengthStrategy' and 'primary_change' in latest_signal:
-                    logger.info(f"  {symbol} {latest_signal['primary_change']:.2f}% vs {latest_signal['comparisons']}")
+                quantity = trade_executors[symbol].calculate_position_size(current_price, risk_percent=0.5, stop_loss_percent=2.0)
                 
                 # Execute sell order
                 order = trade_executors[symbol].place_market_order(side='SELL', quantity=quantity)
                 
                 if order:
-                    # Simplified order execution log
                     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                     value_usd = current_price * quantity
-                    logger.info(f"{timestamp} - {symbol} - {strategy_name} - SELL - ${value_usd:.2f}")
+                    logger.info(f"TRADE EXECUTED: {timestamp} - {symbol} - {strategy_name} - SELL - ${value_usd:.2f}")
                     
                     # Calculate P&L if we have previous trades
                     if trade_history[symbol][strategy_name]['trades']:
@@ -233,20 +245,11 @@ def execute_trades(all_signals, all_data):
                         if last_buy:
                             buy_price = last_buy['price']
                             buy_qty = last_buy['quantity']
-                            sell_value = current_price * quantity
-                            buy_value = buy_price * buy_qty
                             
-                            # Simple P&L calculation
                             if quantity <= buy_qty:
                                 profit = (current_price - buy_price) * quantity
                                 trade_history[symbol][strategy_name]['profit_usd'] += profit
-                                logger.info(f"{symbol} - Trade P&L for {strategy_name}: ${profit:.2f}, Total: ${trade_history[symbol][strategy_name]['profit_usd']:.2f}")
-                                
-                                # Add PnL to the last buy trade
-                                for trade in reversed(trade_history[symbol][strategy_name]['trades']):
-                                    if trade['type'] == 'BUY' and trade.get('pnl') is None:
-                                        trade['pnl'] = profit
-                                        break
+                                logger.info(f"TRADE P&L: ${profit:.2f}, Total: ${trade_history[symbol][strategy_name]['profit_usd']:.2f}")
                     
                     # Record trade
                     trade_history[symbol][strategy_name]['trades'].append({
@@ -258,8 +261,11 @@ def execute_trades(all_signals, all_data):
                         'status': order.get('status', 'TEST')
                     })
                     
-                    # Save trade history
+                    # Save trade history and display updated performance
                     save_trade_history()
+                    display_performance_summary()
+                    display_strategy_performance()
+                    display_pair_performance()
 
 def save_trade_history():
     """Save trade history to a JSON file"""
@@ -289,24 +295,21 @@ def load_trade_history():
             data = json.load(f)
             logger.info("Trade history loaded successfully")
             
-            # Handle both old and new format
-            if isinstance(data, dict) and 'trade_history' in data:
-                loaded_history = data['trade_history']
-            else:
-                loaded_history = data
-                
-            # Ensure all strategies are present for each symbol
-            for symbol in symbols.values():
-                if symbol not in loaded_history:
-                    loaded_history[symbol] = {}
-                
-                # Add any missing strategies
-                for strategy in ['MovingAverageCrossover', 'RSIStrategy', 'BollingerBandStrategy', 
-                               'RelativeStrengthStrategy', 'EnhancedRSIStrategy', 'RSIDivergenceStrategy']:
-                    if strategy not in loaded_history[symbol]:
-                        loaded_history[symbol][strategy] = {'trades': [], 'profit_usd': 0.0}
+            # Create new trade history with current configuration
+            new_history = create_new_trade_history()
             
-            return loaded_history
+            # If the loaded data has the new format, try to migrate relevant data
+            if isinstance(data, dict) and 'trade_history' in data:
+                old_history = data['trade_history']
+                
+                # Only migrate data for current symbols and strategies
+                for symbol in symbols.values():
+                    if symbol in old_history:
+                        for strategy in ['EnhancedRSIStrategy', 'TrendFollowingStrategy']:
+                            if strategy in old_history[symbol]:
+                                new_history[symbol][strategy] = old_history[symbol][strategy]
+            
+            return new_history
     except FileNotFoundError:
         logger.info("No existing trade history found, creating new one")
         return create_new_trade_history()
@@ -319,12 +322,8 @@ def create_new_trade_history():
     new_history = {}
     for symbol in symbols.values():
         new_history[symbol] = {
-            'MovingAverageCrossover': {'trades': [], 'profit_usd': 0.0},
-            'RSIStrategy': {'trades': [], 'profit_usd': 0.0},
-            'BollingerBandStrategy': {'trades': [], 'profit_usd': 0.0},
-            'RelativeStrengthStrategy': {'trades': [], 'profit_usd': 0.0},
             'EnhancedRSIStrategy': {'trades': [], 'profit_usd': 0.0},
-            'RSIDivergenceStrategy': {'trades': [], 'profit_usd': 0.0}
+            'TrendFollowingStrategy': {'trades': [], 'profit_usd': 0.0}
         }
     return new_history
 
@@ -337,7 +336,7 @@ def calculate_portfolio_value():
         }
         
         # Get USDT balance
-        usdt_balance = trade_executors[symbols['BTC']].get_account_balance('USDT')
+        usdt_balance = trade_executors[symbols['ETH']].get_account_balance('USDT')
         portfolio['assets']['USDT'] = {
             'balance': usdt_balance,
             'value_usd': usdt_balance
@@ -407,14 +406,18 @@ def calculate_strategy_performance():
     return strategy_performance
 
 def display_strategy_performance():
-    """Display performance metrics by strategy in a single line format"""
+    """Display performance metrics by strategy in table format"""
     strategy_performance = calculate_strategy_performance()
     
-    print("\n=== Performance by Strategy ===")
+    print("\n=== Strategy Performance ===")
+    print(f"{'Strategy':<25} {'Trades':<8} {'Wins':<8} {'Win Rate':<10} {'P&L':<12} {'Open':<8}")
+    print("-" * 75)
+    
     for strategy, metrics in strategy_performance.items():
         if metrics['total_trades'] > 0:
             win_rate = (metrics['winning_trades'] / metrics['total_trades'] * 100)
-            print(f"{strategy}: {metrics['total_trades']} trades, {metrics['winning_trades']} wins, {win_rate:.2f}% win rate, P&L: ${metrics['realized_profit']:.2f}, Open: {metrics['open_positions']}")
+            print(f"{strategy:<25} {metrics['total_trades']:<8} {metrics['winning_trades']:<8} "
+                  f"{win_rate:<10.2f}% ${metrics['realized_profit']:<12.2f} {metrics['open_positions']:<8}")
 
 def calculate_pair_performance():
     """Calculate and display performance metrics by trading pair"""
@@ -467,19 +470,89 @@ def calculate_pair_performance():
     return pair_performance
 
 def display_pair_performance():
-    """Display performance metrics by trading pair in a single line format"""
+    """Display performance metrics by trading pair in table format"""
     pair_performance = calculate_pair_performance()
     
-    print("\n=== Performance by Trading Pair ===")
+    print("\n=== Pair Performance ===")
+    print(f"{'Pair':<10} {'Trades':<8} {'Wins':<8} {'Win Rate':<10} {'P&L':<12} {'Open':<8}")
+    print("-" * 60)
+    
     for symbol, metrics in pair_performance.items():
-        print(f"{symbol}: {metrics['total_trades']} trades, {metrics['winning_trades']} wins, {metrics['win_rate']:.2f}% win rate, P&L: ${metrics['realized_profit']:.2f}, Open: {metrics['open_positions']}")
+        print(f"{symbol:<10} {metrics['total_trades']:<8} {metrics['winning_trades']:<8} "
+              f"{metrics['win_rate']:<10.2f}% ${metrics['realized_profit']:<12.2f} {metrics['open_positions']:<8}")
+
+def calculate_fee_adjusted_profit(trade):
+    """Calculate profit after trading fees"""
+    if 'profit' not in trade:
+        return 0
+        
+    # Binance spot trading fee is 0.1% per trade (maker or taker)
+    fee_rate = 0.001
+    
+    # Calculate fees for both entry and exit
+    entry_value = trade['entry_price'] * trade['position_size']
+    exit_value = trade['exit_price'] * trade['position_size']
+    
+    entry_fee = entry_value * fee_rate
+    exit_fee = exit_value * fee_rate
+    
+    # Calculate profit after fees
+    fee_adjusted_profit = trade['profit'] - entry_fee - exit_fee
+    
+    return fee_adjusted_profit
+
+def update_drawdown():
+    """Update maximum drawdown"""
+    global peak_balance, max_drawdown
+    
+    if current_balance > peak_balance:
+        peak_balance = current_balance
+    
+    current_drawdown = (peak_balance - current_balance) / peak_balance
+    max_drawdown = max(max_drawdown, current_drawdown)
+    
+    return current_drawdown <= max_drawdown_limit
 
 def display_performance_summary():
-    """Display current portfolio value and performance summary"""
-    portfolio = calculate_portfolio_value()
-    if portfolio:
-        print(f"\n=== Portfolio Summary ===")
-        print(f"Total Value: ${portfolio['total_USD']:.2f}, USDT Balance: ${portfolio['assets']['USDT']['balance']:.2f}")
+    """Display comprehensive performance summary in table format"""
+    # Calculate overall trade performance
+    total_trades = 0
+    winning_trades = 0
+    total_profit = 0
+    total_fee_adjusted_profit = 0
+    
+    for symbol, strategies in trade_history.items():
+        for strategy, data in strategies.items():
+            trades = data['trades']
+            total_trades += len(trades)
+            
+            for trade in trades:
+                if trade.get('profit', 0) > 0:
+                    winning_trades += 1
+                total_profit += trade.get('profit', 0)
+                total_fee_adjusted_profit += calculate_fee_adjusted_profit(trade)
+    
+    # Account Performance Table
+    print("\n=== Account Performance ===")
+    print(f"{'Metric':<20} {'Value':<15}")
+    print("-" * 35)
+    print(f"{'Initial Balance':<20} ${initial_balance:<15.2f}")
+    print(f"{'Current Balance':<20} ${current_balance:<15.2f}")
+    print(f"{'Available Balance':<20} ${available_balance:<15.2f}")
+    print(f"{'Unrealized P&L':<20} ${unrealized_pnl:<15.2f}")
+    print(f"{'Total Value':<20} ${(current_balance + unrealized_pnl):<15.2f}")
+    print(f"{'Return':<20} {((current_balance - initial_balance) / initial_balance * 100):<15.2f}%")
+    print(f"{'Max Drawdown':<20} {max_drawdown:<15.2f}%")
+    
+    # Trade Performance Table
+    print("\n=== Trade Performance ===")
+    print(f"{'Metric':<20} {'Value':<15}")
+    print("-" * 35)
+    print(f"{'Total Trades':<20} {total_trades:<15}")
+    print(f"{'Winning Trades':<20} {winning_trades:<15}")
+    print(f"{'Win Rate':<20} {(winning_trades/total_trades*100 if total_trades > 0 else 0):<15.2f}%")
+    print(f"{'Total Profit':<20} ${total_profit:<15.2f}")
+    print(f"{'Profit (After Fees)':<20} ${total_fee_adjusted_profit:<15.2f}")
 
 def run_bot(interval=60):
     """Main bot loop"""

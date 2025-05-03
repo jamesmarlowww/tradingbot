@@ -25,12 +25,12 @@ class Backtester:
         self.trade_history = []
         self.open_positions = []
         
-        # Risk management parameters
-        self.max_position_size = 0.1  # Maximum 10% of balance per position
-        self.stop_loss_pct = 0.02     # 2% stop loss
-        self.take_profit_pct = 0.06   # 6% take profit
-        self.max_risk_per_trade = 0.01  # Maximum 1% risk per trade
-        self.max_drawdown_limit = 0.2   # Maximum 20% drawdown
+        # Risk management parameters - More conservative settings
+        self.max_position_size = 0.05  # Maximum 5% of balance per position (reduced from 10%)
+        self.stop_loss_pct = 0.02     # 2% stop loss (unchanged)
+        self.take_profit_pct = 0.06   # 6% take profit (unchanged)
+        self.max_risk_per_trade = 0.01  # Maximum 1% risk per trade (unchanged)
+        self.max_drawdown_limit = 0.2   # Maximum 20% drawdown (unchanged)
         
         # Initialize strategies
         self.strategies = [
