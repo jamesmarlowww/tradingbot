@@ -1641,6 +1641,110 @@
             "quantity": 0.01,
             "value_usd": 18.3284,
             "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:17:05",
+            "type": "SELL",
+            "price": 1832.88,
+            "quantity": 0.01,
+            "value_usd": 18.3288,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:18:32",
+            "type": "SELL",
+            "price": 1831.65,
+            "quantity": 0.01,
+            "value_usd": 18.3165,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:20:03",
+            "type": "SELL",
+            "price": 1832.4,
+            "quantity": 0.01,
+            "value_usd": 18.324,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:21:31",
+            "type": "SELL",
+            "price": 1832.77,
+            "quantity": 0.01,
+            "value_usd": 18.3277,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:22:56",
+            "type": "SELL",
+            "price": 1832.88,
+            "quantity": 0.01,
+            "value_usd": 18.3288,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:24:22",
+            "type": "SELL",
+            "price": 1834.07,
+            "quantity": 0.01,
+            "value_usd": 18.3407,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:25:46",
+            "type": "SELL",
+            "price": 1833.33,
+            "quantity": 0.012593583615606573,
+            "value_usd": 23.08819465,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:27:20",
+            "type": "SELL",
+            "price": 1834.19,
+            "quantity": 0.017266635762925323,
+            "value_usd": 31.67029065,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:28:50",
+            "type": "SELL",
+            "price": 1834.8,
+            "quantity": 0.023683774880095924,
+            "value_usd": 43.45499015,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:32:10",
+            "type": "SELL",
+            "price": 1834.77,
+            "quantity": 0.03246099246772075,
+            "value_usd": 59.55845515,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:33:40",
+            "type": "SELL",
+            "price": 1835.44,
+            "quantity": 0.03801139162816545,
+            "value_usd": 69.76762864999999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:35:05",
+            "type": "SELL",
+            "price": 1834.8,
+            "quantity": 0.05220548146936996,
+            "value_usd": 95.7866174,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:36:30",
+            "type": "SELL",
+            "price": 1834.53,
+            "quantity": 0.045899623418532265,
+            "value_usd": 84.20423615,
+            "status": "FILLED"
           }
         ],
         "profit_usd": 0.0
@@ -3528,6 +3632,126 @@
             "price": 148.54,
             "quantity": 0.1,
             "value_usd": 14.854,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:17:14",
+            "type": "BUY",
+            "price": 148.47,
+            "quantity": 0.1,
+            "value_usd": 14.847000000000001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:18:41",
+            "type": "BUY",
+            "price": 148.46,
+            "quantity": 0.1,
+            "value_usd": 14.846000000000002,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:20:11",
+            "type": "BUY",
+            "price": 148.61,
+            "quantity": 0.1,
+            "value_usd": 14.861000000000002,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:21:39",
+            "type": "BUY",
+            "price": 148.48,
+            "quantity": 0.1,
+            "value_usd": 14.847999999999999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:23:05",
+            "type": "BUY",
+            "price": 148.52,
+            "quantity": 0.11799290095610018,
+            "value_usd": 17.52430565,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:24:30",
+            "type": "BUY",
+            "price": 148.66,
+            "quantity": 0.14146388167630836,
+            "value_usd": 21.03002065,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:25:54",
+            "type": "BUY",
+            "price": 148.59,
+            "quantity": 0.19393806548219936,
+            "value_usd": 28.817257150000003,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:27:30",
+            "type": "BUY",
+            "price": 148.66,
+            "quantity": 0.26609247712901923,
+            "value_usd": 39.55730765,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:28:58",
+            "type": "BUY",
+            "price": 148.69,
+            "quantity": 0.3420626817539848,
+            "value_usd": 50.86130015,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:32:19",
+            "type": "BUY",
+            "price": 148.97,
+            "quantity": 0.49956374538497683,
+            "value_usd": 74.42001115,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:33:49",
+            "type": "BUY",
+            "price": 148.92,
+            "quantity": 0.585573755372012,
+            "value_usd": 87.20364365000002,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:35:15",
+            "type": "BUY",
+            "price": 148.89,
+            "quantity": 0.804154925784136,
+            "value_usd": 119.7306269,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:36:38",
+            "type": "BUY",
+            "price": 148.95,
+            "quantity": 0.7063386817724069,
+            "value_usd": 105.20914665,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 13:18:50",
+            "type": "SELL",
+            "price": 148.47,
+            "quantity": 1.9875103734761232,
+            "value_usd": 295.08566515,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 13:20:11",
+            "type": "SELL",
+            "price": 148.45,
+            "quantity": 3.8818116042438535,
+            "value_usd": 576.25493265,
             "status": "FILLED"
           }
         ],
@@ -6325,7 +6549,88 @@
         "profit_usd": 0.0
       },
       "EnhancedRSIStrategy": {
-        "trades": [],
+        "trades": [
+          {
+            "timestamp": "2025-05-03 12:18:50",
+            "type": "SELL",
+            "price": 14.51,
+            "quantity": 0.3723091419710544,
+            "value_usd": 5.402205649999999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:20:20",
+            "type": "SELL",
+            "price": 14.52,
+            "quantity": 0.5241291769972453,
+            "value_usd": 7.610355650000001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:21:46",
+            "type": "SELL",
+            "price": 14.51,
+            "quantity": 0.7144473225361819,
+            "value_usd": 10.36663065,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:23:11",
+            "type": "SELL",
+            "price": 14.5,
+            "quantity": 0.9089721137931036,
+            "value_usd": 13.180095650000002,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:24:35",
+            "type": "SELL",
+            "price": 14.52,
+            "quantity": 1.087400182506887,
+            "value_usd": 15.78905065,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:26:04",
+            "type": "SELL",
+            "price": 14.52,
+            "quantity": 1.4908613739669423,
+            "value_usd": 21.647307150000003,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:27:37",
+            "type": "SELL",
+            "price": 14.53,
+            "quantity": 2.041942370956642,
+            "value_usd": 29.66942265000001,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:29:06",
+            "type": "SELL",
+            "price": 14.54,
+            "quantity": 3.278679859009628,
+            "value_usd": 47.67200514999999,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:32:28",
+            "type": "SELL",
+            "price": 14.56,
+            "quantity": 3.8348903605769227,
+            "value_usd": 55.836003649999995,
+            "status": "FILLED"
+          },
+          {
+            "timestamp": "2025-05-03 12:33:55",
+            "type": "SELL",
+            "price": 14.55,
+            "quantity": 4.496400766323023,
+            "value_usd": 65.42263114999999,
+            "status": "FILLED"
+          }
+        ],
         "profit_usd": 0.0
       }
     }
@@ -6335,14 +6640,14 @@
       "total_trades": 32,
       "winning_trades": 3,
       "realized_profit": -0.9307635249715893,
-      "unrealized_profit": -0.17393304239233706,
+      "unrealized_profit": -2.32843096169895,
       "open_positions": 1
     },
     "RSIStrategy": {
       "total_trades": 163,
       "winning_trades": 27,
       "realized_profit": -12.762882432782535,
-      "unrealized_profit": -21.59157414705434,
+      "unrealized_profit": -51.23884025751418,
       "open_positions": 12
     },
     "BollingerBandStrategy": {
@@ -6353,7 +6658,7 @@
       "open_positions": 0
     },
     "EnhancedRSIStrategy": {
-      "total_trades": 3,
+      "total_trades": 26,
       "winning_trades": 0,
       "realized_profit": 0,
       "unrealized_profit": 0,
@@ -6363,15 +6668,15 @@
       "total_trades": 480,
       "winning_trades": 84,
       "realized_profit": -121.56903338884516,
-      "unrealized_profit": -27.190221675176087,
+      "unrealized_profit": -71.79946601587295,
       "open_positions": 43
     },
     "TrendFollowingStrategy": {
-      "total_trades": 3,
-      "winning_trades": 0,
-      "realized_profit": 0,
-      "unrealized_profit": 0.032000000000005,
-      "open_positions": 3
+      "total_trades": 18,
+      "winning_trades": 2,
+      "realized_profit": 0.4940813190877789,
+      "unrealized_profit": -6.215269503515435,
+      "open_positions": 14
     }
   },
   "pair_performance": {
@@ -6380,33 +6685,41 @@
       "winning_trades": 19,
       "win_rate": 16.23931623931624,
       "realized_profit": -1.6601830706882217,
-      "unrealized_profit": -0.1865479747005,
+      "unrealized_profit": -3.0923320279484523,
       "open_positions": 2
     },
     "ETHUSDT": {
-      "total_trades": 74,
+      "total_trades": 87,
       "winning_trades": 12,
-      "win_rate": 16.216216216216218,
+      "win_rate": 13.793103448275861,
       "realized_profit": 3.846016566994362,
       "unrealized_profit": 0,
       "open_positions": 0
     },
     "SOLUSDT": {
-      "total_trades": 224,
-      "winning_trades": 48,
-      "win_rate": 21.428571428571427,
-      "realized_profit": -0.10782936860820125,
-      "unrealized_profit": 2.5530512767777407,
-      "open_positions": 30
+      "total_trades": 239,
+      "winning_trades": 50,
+      "win_rate": 20.920502092050206,
+      "realized_profit": 0.38625195047957767,
+      "unrealized_profit": -10.386271248686983,
+      "open_positions": 41
     },
     "AVAXUSDT": {
       "total_trades": 337,
       "winning_trades": 47,
       "win_rate": 13.94658753709199,
       "realized_profit": -133.49466690730284,
-      "unrealized_profit": -51.290048186450996,
+      "unrealized_profit": -118.10390940765092,
       "open_positions": 55
+    },
+    "LINKUSDT": {
+      "total_trades": 10,
+      "winning_trades": 0,
+      "win_rate": 0.0,
+      "realized_profit": 0,
+      "unrealized_profit": 0,
+      "open_positions": 0
     }
   },
-  "last_updated": "2025-05-03T12:16:03.738101"
+  "last_updated": "2025-05-03T22:02:21.044814"
 }

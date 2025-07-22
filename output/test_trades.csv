@@ -1,0 +1,2 @@
+strategy,trade_type,take_profit,position_size,stop_loss,notes,timeframe,symbol,entry_price,entry_time,profit,exit_time,fees,timestamp
+test_strategy,LONG,52000.0,0.1,49000.0,Test trade,1h,BTCUSDT,50000.0,2025-05-21 13:41:37.802276+00:00,100.0,2025-05-21 13:41:37.802276+00:00,0.1,2025-05-21 03:41:40.455000+00:00
