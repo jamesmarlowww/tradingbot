@@ -1,0 +1,32 @@
+[Unit]
+Description=Trading Bot Profit Streak Service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=tradingbot
+Group=tradingbot
+WorkingDirectory=/home/tradingbot/btc-trading
+Environment=ENVIRONMENT=production
+Environment=PYTHONPATH=/home/tradingbot/btc-trading
+ExecStart=/usr/bin/python3 /home/tradingbot/btc-trading/scripts/bots/profitStreakBot.py --interval 900
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/log/tradingbot /home/tradingbot/btc-trading/data
+
+# Resource limits
+LimitNOFILE=65536
+MemoryMax=2G
+CPUQuota=50%
+
+[Install]
+WantedBy=multi-user.target

@@ -6640,14 +6640,14 @@
       "total_trades": 32,
       "winning_trades": 3,
       "realized_profit": -0.9307635249715893,
-      "unrealized_profit": -2.32843096169895,
+      "unrealized_profit": 59.58153287921452,
       "open_positions": 1
     },
     "RSIStrategy": {
       "total_trades": 163,
       "winning_trades": 27,
       "realized_profit": -12.762882432782535,
-      "unrealized_profit": -51.23884025751418,
+      "unrealized_profit": 141.73949609383462,
       "open_positions": 12
     },
     "BollingerBandStrategy": {
@@ -6668,14 +6668,14 @@
       "total_trades": 480,
       "winning_trades": 84,
       "realized_profit": -121.56903338884516,
-      "unrealized_profit": -71.79946601587295,
+      "unrealized_profit": 372.2416756534999,
       "open_positions": 43
     },
     "TrendFollowingStrategy": {
       "total_trades": 18,
       "winning_trades": 2,
       "realized_profit": 0.4940813190877789,
-      "unrealized_profit": -6.215269503515435,
+      "unrealized_profit": 158.49224628511212,
       "open_positions": 14
     }
   },
@@ -6685,7 +6685,7 @@
       "winning_trades": 19,
       "win_rate": 16.23931623931624,
       "realized_profit": -1.6601830706882217,
-      "unrealized_profit": -3.0923320279484523,
+      "unrealized_profit": 80.38668218863273,
       "open_positions": 2
     },
     "ETHUSDT": {
@@ -6701,7 +6701,7 @@
       "winning_trades": 50,
       "win_rate": 20.920502092050206,
       "realized_profit": 0.38625195047957767,
-      "unrealized_profit": -10.386271248686983,
+      "unrealized_profit": 373.44450134128675,
       "open_positions": 41
     },
     "AVAXUSDT": {
@@ -6709,7 +6709,7 @@
       "winning_trades": 47,
       "win_rate": 13.94658753709199,
       "realized_profit": -133.49466690730284,
-      "unrealized_profit": -118.10390940765092,
+      "unrealized_profit": 279.0855217298946,
       "open_positions": 55
     },
     "LINKUSDT": {
@@ -6721,5 +6721,5 @@
       "open_positions": 0
     }
   },
-  "last_updated": "2025-05-03T22:02:21.044814"
+  "last_updated": "2025-08-21T13:01:28.621994"
 }

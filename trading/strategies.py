@@ -173,14 +173,25 @@ class RSIStrategy:
                     continue
                 
                 # Skip if volume is too low
-                if current_volume_ratio < 1.2 or current_volume_trend < 1.1:
+                if current_volume_ratio < 0.8 or current_volume_trend < 0.9:
                     continue
                 
-                # Generate signals with trend confirmation
-                if current_rsi < self.oversold and current_trend_strength > 0.002:
-                    signals.loc[idx, 'signal'] = 1.0
-                elif current_rsi > self.overbought and current_trend_strength < -0.002:
-                    signals.loc[idx, 'signal'] = -1.0
+                # Generate signals with enhanced trend and volume confirmation
+                if current_rsi < self.oversold and current_trend_strength > 0.001:
+                    # Additional volume confirmation
+                    current_volume = df['volume'].loc[idx]
+                    avg_volume = df['volume'].rolling(20).mean().loc[idx]
+                    
+                    if current_volume > avg_volume * 1.1:  # 10% above average volume
+                        signals.loc[idx, 'signal'] = 1.0
+                        
+                elif current_rsi > self.overbought and current_trend_strength < -0.001:
+                    # Additional volume confirmation
+                    current_volume = df['volume'].loc[idx]
+                    avg_volume = df['volume'].rolling(20).mean().loc[idx]
+                    
+                    if current_volume > avg_volume * 1.1:  # 10% above average volume
+                        signals.loc[idx, 'signal'] = -1.0
             
             # Calculate position changes
             signals['position'] = signals['signal'].diff()
@@ -194,7 +205,7 @@ class RSIStrategy:
 class EnhancedRSIStrategy:
     """Enhanced RSI strategy with relaxed rules"""
     
-    def __init__(self, rsi_period=14, oversold_threshold=45, overbought_threshold=55, 
+    def __init__(self, rsi_period=14, oversold_threshold=40, overbought_threshold=60, 
                  trend_period=5, volatility_period=5, volatility_factor=0.1):
         self.rsi_period = rsi_period
         self.base_oversold = oversold_threshold
@@ -207,6 +218,13 @@ class EnhancedRSIStrategy:
     def generate_signals(self, df):
         try:
             if len(df) == 0:
+                return pd.DataFrame()
+            
+            # Check if required columns exist
+            required_columns = ['close', 'rsi']
+            missing_columns = [col for col in required_columns if col not in df.columns]
+            if missing_columns:
+                self.logger.error(f"Missing required columns: {missing_columns}")
                 return pd.DataFrame()
                 
             signals = pd.DataFrame(index=df.index)
@@ -229,9 +247,22 @@ class EnhancedRSIStrategy:
             # Initialize signal column
             signals['signal'] = 0.0
             
-            # More aggressive signals
-            signals.loc[signals['rsi'] < oversold, 'signal'] = 1.0
-            signals.loc[signals['rsi'] > overbought, 'signal'] = -1.0
+            # Enhanced signals with trend and momentum confirmation
+            # Buy signals: RSI oversold + price above short MA + momentum positive
+            buy_condition = (
+                (signals['rsi'] < oversold) & 
+                (df['close'] > df['close'].rolling(5).mean()) &
+                (df['close'] > df['close'].shift(1))
+            )
+            signals.loc[buy_condition, 'signal'] = 1.0
+            
+            # Sell signals: RSI overbought + price below short MA + momentum negative
+            sell_condition = (
+                (signals['rsi'] > overbought) & 
+                (df['close'] < df['close'].rolling(5).mean()) &
+                (df['close'] < df['close'].shift(1))
+            )
+            signals.loc[sell_condition, 'signal'] = -1.0
             
             # Calculate position changes
             signals['position'] = signals['signal'].diff()
@@ -245,7 +276,7 @@ class EnhancedRSIStrategy:
 class LiveReactiveRSIStrategy:
     """Strategy that uses RSI with dynamic thresholds based on market conditions"""
     
-    def __init__(self, rsi_period=14, oversold_threshold=45, overbought_threshold=55, volatility_factor=0.02):
+    def __init__(self, rsi_period=14, oversold_threshold=30, overbought_threshold=70, volatility_factor=0.02):
         self.rsi_period = rsi_period
         self.oversold_threshold = oversold_threshold
         self.overbought_threshold = overbought_threshold
@@ -259,6 +290,13 @@ class LiveReactiveRSIStrategy:
         """
         if data.empty:
             self.logger.warning("Empty DataFrame provided to LiveReactiveRSIStrategy")
+            return pd.DataFrame()
+        
+        # Check if required columns exist
+        required_columns = ['close', 'rsi', 'volume']
+        missing_columns = [col for col in required_columns if col not in data.columns]
+        if missing_columns:
+            self.logger.error(f"Missing required columns: {missing_columns}")
             return pd.DataFrame()
             
         try:
@@ -292,29 +330,39 @@ class LiveReactiveRSIStrategy:
                 current_volatility = data['volatility'].iloc[i]
                 
                 # Log RSI and volatility values for debugging
-                if i % 100 == 0:  # Log every 100th candle to avoid too much output
+                if i % 1000 == 0:  # Log every 1000th candle to reduce output
                     self.logger.info(f"Candle {i}: RSI={current_rsi:.2f}, Volatility={current_volatility:.6f} (Mean={mean_volatility:.6f})")
                 
-                # Skip if volatility is extremely high (5x mean)
-                if current_volatility > 5 * mean_volatility:
+                # Skip if volatility is extremely high (3x mean) - balanced approach
+                if current_volatility > 3 * mean_volatility:
                     skipped_volatility += 1
-                    if i % 100 == 0:  # Log skipped trades periodically
-                        self.logger.info(f"Skipped trade at candle {i} due to high volatility: {current_volatility:.6f} > {5 * mean_volatility:.6f}")
+                    if i % 1000 == 0:  # Log skipped trades periodically
+                        self.logger.info(f"Skipped trade at candle {i} due to high volatility: {current_volatility:.6f} > {3 * mean_volatility:.6f}")
                     continue
                     
-                # Generate buy signal when RSI is oversold
+                # Generate buy signal when RSI is oversold with volume confirmation
                 if current_rsi < self.oversold_threshold:
-                    signals.iloc[i, signals.columns.get_loc('signal')] = 1
-                    signals.iloc[i, signals.columns.get_loc('position')] = 1  # Set position directly
-                    buy_signals += 1
-                    self.logger.info(f"Buy signal generated at {data.index[i]}: RSI={current_rsi:.2f}")
+                    # Add volume confirmation - only buy if volume is above average
+                    current_volume = data['volume'].iloc[i]
+                    avg_volume = data['volume'].iloc[max(0, i-20):i+1].mean()
                     
-                # Generate sell signal when RSI is overbought
+                    if current_volume > avg_volume * 1.2:  # 20% above average volume
+                        signals.iloc[i, signals.columns.get_loc('signal')] = 1
+                        signals.iloc[i, signals.columns.get_loc('position')] = 1  # Set position directly
+                        buy_signals += 1
+                        self.logger.info(f"Buy signal generated at {data.index[i]}: RSI={current_rsi:.2f}")
+                    
+                # Generate sell signal when RSI is overbought with volume confirmation
                 elif current_rsi > self.overbought_threshold:
-                    signals.iloc[i, signals.columns.get_loc('signal')] = -1
-                    signals.iloc[i, signals.columns.get_loc('position')] = -1  # Set position directly
-                    sell_signals += 1
-                    self.logger.info(f"Sell signal generated at {data.index[i]}: RSI={current_rsi:.2f}")
+                    # Add volume confirmation - only sell if volume is above average
+                    current_volume = data['volume'].iloc[i]
+                    avg_volume = data['volume'].iloc[max(0, i-20):i+1].mean()
+                    
+                    if current_volume > avg_volume * 1.2:  # 20% above average volume
+                        signals.iloc[i, signals.columns.get_loc('signal')] = -1
+                        signals.iloc[i, signals.columns.get_loc('position')] = -1  # Set position directly
+                        sell_signals += 1
+                        self.logger.info(f"Sell signal generated at {data.index[i]}: RSI={current_rsi:.2f}")
             
             # Log signal statistics
             self.logger.info(f"Generated {buy_signals} buy signals and {sell_signals} sell signals")
@@ -470,7 +518,7 @@ class RSIDivergenceStrategy:
         self.divergence_threshold = divergence_threshold
         self.logger = logging.getLogger(__name__)
     
-    def _find_local_minima(self, series, window=5):
+    def _find_local_minima(self, series, window=10):
         """Find local minima in a time series"""
         local_minima = []
         for i in range(window, len(series) - window):
@@ -481,7 +529,7 @@ class RSIDivergenceStrategy:
                 local_minima.append(None)
         return pd.Series(local_minima, index=series.index[window:-window])
     
-    def _find_local_maxima(self, series, window=5):
+    def _find_local_maxima(self, series, window=10):
         """Find local maxima in a time series"""
         local_maxima = []
         for i in range(window, len(series) - window):
@@ -619,17 +667,30 @@ class MomentumStrategy:
                 if current_volume_ratio < 1.1 or current_volume_trend < 1.0:  # Reduced thresholds
                     continue
                 
-                # Generate signals with trend and acceleration confirmation
-                if (current_momentum > self.threshold and  # Removed 1.5x multiplier
+                # Generate signals with enhanced acceleration and volume confirmation
+                if (current_momentum > self.threshold and
                     current_momentum > current_momentum_ma and 
-                    current_trend > 0.001 and  # Reduced from 0.002
+                    current_trend > 0.001 and
                     current_acceleration > current_acceleration_ma):
-                    signals.loc[idx, 'signal'] = 1.0
-                elif (current_momentum < -self.threshold and  # Removed 1.5x multiplier
+                    
+                    # Additional volume confirmation
+                    current_volume = df['volume'].loc[idx]
+                    avg_volume = df['volume'].rolling(20).mean().loc[idx]
+                    
+                    if current_volume > avg_volume * 1.1:  # 10% above average volume
+                        signals.loc[idx, 'signal'] = 1.0
+                        
+                elif (current_momentum < -self.threshold and
                       current_momentum < current_momentum_ma and 
-                      current_trend < -0.001 and  # Reduced from -0.002
+                      current_trend < -0.001 and
                       current_acceleration < current_acceleration_ma):
-                    signals.loc[idx, 'signal'] = -1.0
+                    
+                    # Additional volume confirmation
+                    current_volume = df['volume'].loc[idx]
+                    avg_volume = df['volume'].rolling(20).mean().loc[idx]
+                    
+                    if current_volume > avg_volume * 1.1:  # 10% above average volume
+                        signals.loc[idx, 'signal'] = -1.0
             
             # Calculate position changes
             signals['position'] = signals['signal'].diff()
@@ -714,30 +775,43 @@ class TrendFollowingStrategy:
                 current_momentum_ma = signals.loc[idx, 'momentum_ma']
                 
                 # Skip if volatility is too high
-                if current_volatility > current_volatility_ma * 1.5:  # Reduced from 1.8
+                if current_volatility > current_volatility_ma * 1.2:  # Reduced from 1.5
                     continue
                 
                 # Skip if volume is too low
-                if current_volume_ratio < 1.1 or current_volume_trend < 1.0:  # Reduced thresholds
+                if current_volume_ratio < 0.5 or current_volume_trend < 0.8:  # Reduced thresholds
                     continue
                 
                 # Calculate price deviation from moving averages
                 short_deviation = (current_price - current_short_ma) / current_short_ma
                 long_deviation = (current_price - current_long_ma) / current_long_ma
                 
-                # Generate signals with multiple timeframe confirmation
-                if (short_deviation > self.threshold and  # Removed 1.5x multiplier
-                    long_deviation > self.threshold and  # Removed 1.5x multiplier
-                    current_trend > 0.001 and  # Reduced from 0.002
-                    current_trend_long > 0.001 and  # Reduced from 0.002
+                # Generate signals with enhanced momentum and volume confirmation
+                if (short_deviation > self.threshold and
+                    long_deviation > self.threshold and
+                    current_trend > 0.0005 and
+                    current_trend_long > 0.0005 and
                     current_momentum > current_momentum_ma):
-                    signals.loc[idx, 'signal'] = 1.0
-                elif (short_deviation < -self.threshold and  # Removed 1.5x multiplier
-                      long_deviation < -self.threshold and  # Removed 1.5x multiplier
-                      current_trend < -0.001 and  # Reduced from -0.002
-                      current_trend_long < -0.001 and  # Reduced from -0.002
+                    
+                    # Additional volume confirmation
+                    current_volume = df['volume'].loc[idx]
+                    avg_volume = df['volume'].rolling(20).mean().loc[idx]
+                    
+                    if current_volume > avg_volume * 1.15:  # 15% above average volume
+                        signals.loc[idx, 'signal'] = 1.0
+                        
+                elif (short_deviation < -self.threshold and
+                      long_deviation < -self.threshold and
+                      current_trend < -0.0005 and
+                      current_trend_long < -0.0005 and
                       current_momentum < current_momentum_ma):
-                    signals.loc[idx, 'signal'] = -1.0
+                    
+                    # Additional volume confirmation
+                    current_volume = df['volume'].loc[idx]
+                    avg_volume = df['volume'].rolling(20).mean().loc[idx]
+                    
+                    if current_volume > avg_volume * 1.15:  # 15% above average volume
+                        signals.loc[idx, 'signal'] = -1.0
             
             # Calculate position changes
             signals['position'] = signals['signal'].diff()
@@ -746,4 +820,177 @@ class TrendFollowingStrategy:
             
         except Exception as e:
             self.logger.error(f"Error in TrendFollowingStrategy: {e}")
+            return pd.DataFrame()
+
+
+class VWAPStrategy:
+    """Volume-Weighted Average Price Strategy - Institutional favorite"""
+    
+    def __init__(self, period=20, buffer_percent=0.01, volume_threshold=1.2):
+        self.period = period
+        self.buffer_percent = buffer_percent  # 1% buffer by default
+        self.volume_threshold = volume_threshold
+        self.logger = logging.getLogger(__name__)
+        
+        # Adjust parameters based on timeframe
+        if hasattr(self, 'timeframe'):
+            if self.timeframe == '4h':
+                self.period = 30
+                self.buffer_percent = 0.015
+            elif self.timeframe == '1d':
+                self.period = 50
+                self.buffer_percent = 0.02
+    
+    def generate_signals(self, df):
+        try:
+            if len(df) == 0:
+                return pd.DataFrame()
+                
+            signals = pd.DataFrame(index=df.index)
+            signals['price'] = df['close']
+            
+            # Calculate VWAP
+            signals['typical_price'] = (df['high'] + df['low'] + df['close']) / 3
+            signals['price_volume'] = signals['typical_price'] * df['volume']
+            signals['cumulative_pv'] = signals['price_volume'].rolling(window=self.period, min_periods=1).sum()
+            signals['cumulative_volume'] = df['volume'].rolling(window=self.period, min_periods=1).sum()
+            signals['vwap'] = signals['cumulative_pv'] / signals['cumulative_volume']
+            
+            # Calculate VWAP bands
+            signals['vwap_upper'] = signals['vwap'] * (1 + self.buffer_percent)
+            signals['vwap_lower'] = signals['vwap'] * (1 - self.buffer_percent)
+            
+            # Calculate volume metrics
+            signals['volume_ma'] = df['volume'].rolling(window=self.period, min_periods=1).mean()
+            signals['volume_ratio'] = df['volume'] / signals['volume_ma']
+            
+            # Calculate price momentum
+            signals['price_momentum'] = signals['price'].pct_change(periods=5)
+            signals['vwap_momentum'] = signals['vwap'].pct_change(periods=5)
+            
+            # Initialize signal column
+            signals['signal'] = 0.0
+            
+            # Generate signals
+            for idx in df.index:
+                current_price = signals.loc[idx, 'price']
+                current_vwap = signals.loc[idx, 'vwap']
+                current_vwap_upper = signals.loc[idx, 'vwap_upper']
+                current_vwap_lower = signals.loc[idx, 'vwap_lower']
+                current_volume_ratio = signals.loc[idx, 'volume_ratio']
+                current_price_momentum = signals.loc[idx, 'price_momentum']
+                current_vwap_momentum = signals.loc[idx, 'vwap_momentum']
+                
+                # Skip if volume is too low
+                if current_volume_ratio < 0.8:
+                    continue
+                
+                # Buy signal: Price below VWAP with momentum and volume
+                if (current_price < current_vwap_lower and 
+                    current_price_momentum > 0 and 
+                    current_vwap_momentum > 0 and
+                    current_volume_ratio > self.volume_threshold):
+                    signals.loc[idx, 'signal'] = 1.0
+                    
+                # Sell signal: Price above VWAP with momentum and volume
+                elif (current_price > current_vwap_upper and 
+                      current_price_momentum < 0 and 
+                      current_vwap_momentum < 0 and
+                      current_volume_ratio > self.volume_threshold):
+                    signals.loc[idx, 'signal'] = -1.0
+            
+            # Calculate position changes
+            signals['position'] = signals['signal'].diff()
+            
+            return signals
+            
+        except Exception as e:
+            self.logger.error(f"Error in VWAPStrategy: {e}")
+            return pd.DataFrame()
+
+
+class PriceActionBreakoutStrategy:
+    """Simple Price Action Breakout Strategy - Pure price-based, no indicators"""
+    
+    def __init__(self, breakout_period=20, atr_period=14, atr_multiplier=1.5, volume_threshold=1.3):
+        self.breakout_period = breakout_period
+        self.atr_period = atr_period
+        self.atr_multiplier = atr_multiplier
+        self.volume_threshold = volume_threshold
+        self.logger = logging.getLogger(__name__)
+        
+        # Adjust parameters based on timeframe
+        if hasattr(self, 'timeframe'):
+            if self.timeframe == '4h':
+                self.breakout_period = 30
+                self.atr_multiplier = 1.8
+            elif self.timeframe == '1d':
+                self.breakout_period = 50
+                self.atr_multiplier = 2.0
+    
+    def generate_signals(self, df):
+        try:
+            if len(df) == 0:
+                return pd.DataFrame()
+                
+            signals = pd.DataFrame(index=df.index)
+            signals['price'] = df['close']
+            
+            # Calculate breakout levels
+            signals['high_breakout'] = df['high'].rolling(window=self.breakout_period, min_periods=1).max()
+            signals['low_breakout'] = df['low'].rolling(window=self.breakout_period, min_periods=1).min()
+            
+            # Calculate ATR for confirmation
+            signals['tr1'] = df['high'] - df['low']
+            signals['tr2'] = abs(df['high'] - df['close'].shift(1))
+            signals['tr3'] = abs(df['low'] - df['close'].shift(1))
+            signals['true_range'] = signals[['tr1', 'tr2', 'tr3']].max(axis=1)
+            signals['atr'] = signals['true_range'].rolling(window=self.atr_period, min_periods=1).mean()
+            
+            # Calculate volume metrics
+            signals['volume_ma'] = df['volume'].rolling(window=self.breakout_period, min_periods=1).mean()
+            signals['volume_ratio'] = df['volume'] / signals['volume_ma']
+            
+            # Calculate price momentum
+            signals['price_momentum'] = signals['price'].pct_change(periods=3)
+            
+            # Initialize signal column
+            signals['signal'] = 0.0
+            
+            # Generate signals
+            for idx in df.index:
+                current_price = signals.loc[idx, 'price']
+                current_high_breakout = signals.loc[idx, 'high_breakout']
+                current_low_breakout = signals.loc[idx, 'low_breakout']
+                current_atr = signals.loc[idx, 'atr']
+                current_volume_ratio = signals.loc[idx, 'volume_ratio']
+                current_momentum = signals.loc[idx, 'price_momentum']
+                
+                # Skip if volume is too low
+                if current_volume_ratio < 0.8:
+                    continue
+                
+                # Calculate breakout thresholds with ATR confirmation
+                upper_threshold = current_high_breakout + (current_atr * self.atr_multiplier)
+                lower_threshold = current_low_breakout - (current_atr * self.atr_multiplier)
+                
+                # Buy signal: Break above recent high with volume and momentum
+                if (current_price > upper_threshold and 
+                    current_volume_ratio > self.volume_threshold and
+                    current_momentum > 0):
+                    signals.loc[idx, 'signal'] = 1.0
+                    
+                # Sell signal: Break below recent low with volume and momentum
+                elif (current_price < lower_threshold and 
+                      current_volume_ratio > self.volume_threshold and
+                      current_momentum < 0):
+                    signals.loc[idx, 'signal'] = -1.0
+            
+            # Calculate position changes
+            signals['position'] = signals['signal'].diff()
+            
+            return signals
+            
+        except Exception as e:
+            self.logger.error(f"Error in PriceActionBreakoutStrategy: {e}")
             return pd.DataFrame()
